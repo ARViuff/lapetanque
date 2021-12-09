@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menukort</title>
+</head>
+<body>
+<style>
+    .menucontainer{
+        display: grid;
+        grid-template-rows: 0.1fr 1fr ;
+        place-content: start center;
+    }
+
+    #menucontent{
+        display: grid;
+        grid-template-columns: 0.1fr 1fr 0.2fr;
+    }
+
+    .nr{
+        grid-column: 1/2;
+    }
+
+    .indhold{
+        grid-column: 2/3;
+    }
+
+    .pris{
+        grid-column: 3/4;
+        text-align: end;
+    }
+</style>
+    <main>
+        <div class="menucontainer"><h1>Les Spécialites</h1><div id="menucontent"><p class="nr">1.</p><p class="indhold">Escargots au beurre persillé
+Snegle m. persillesmør</p><p class="indhold">6stk</p><p class="pris">99,-</p><p class="indhold">12stk</p><p class="pris">152,-</p> <br> <p class="nr">2.</p><p class="indhold">Soupé de poisson bretonne<br>Fiskesuppe m. ost og croutoner</p>
+<p class="pris">104,-</p><br> <p class="nr">3.</p><p class="indhold">Quiche maison avec salade Husets tærte m. salat</p><p class="pris">103,-</p><br><p class="nr">4.</p>
+<p class="indhold"> Salade de Chévre chaud<br>Salat med gratineret gedeost,<br>sorte oliven og valnødder<br> + luftørret skinke	</p><p class="pris"><br><br><br>109,-</p><br><p class="nr">5.</p> <p class="indhold">Salade lyonnaise<br>
+Salat m. savteret bacon,<br>pocheret æg og croutoner</p> <p class="pris">105,-</p><br><p class="nr">6.</p><p class="indhold">Soupe à l’oignon<br>Løgsuppe</p><p class="pris">105,-</p>
+ <p class="nr">7.</p><p class="indhold">Assiette de charcuterie<br>Tallerken med forskelligt<br>Fransk charcuterie, cornichoner, oliven</p><p class="pris">111,-</p><p class="nr">8.</p>
+ <p class="indhold">Assiette de saumon fumé<br>Tallerken m. røget laks<br>fra Daniel Letz serveret<br>m. dildereme. og tangsalat</p><p class="pris">134,-</p><p class="nr">9.</p><p class="indhold">Assiette de fromage<br>Ostetallerken serveret m.oliven og
+<br>Marmalade</p><p class="pris">105,-</p>
+<p class="nr">10.</p>
+<p class="indhold">Assiette de charcuterie et fromage<br>Charcuterie og ostetallerken</p>
+<p class="pris">144,-</p>
+<p class="nr">11.</p>
+<p class="indhold">Camembert grillé avec salade<br>Grillet camembert serveret<br>m. salat og marmalade</p>
+<p class="pris">118,-</p>
+<p class="nr">12.</p>
+<p class="indhold">Croque Monsieur avec salade<br>Fransk gratineret toast m. Skinke<br>og bechamelsauce serveret m.salat</p>
+<p class="pris">97,-</p>
+<p class="nr">13.</p>
+<p class="indhold">Croque Madame avec salade<br>Croque Monsieur m. spejlæg</p>
+<p class="pris">99,-</p>
+</div></div>
+    </main>
+   <!--  <script src="../Scripts/login.js"></script> -->
+</body>
+</html>
