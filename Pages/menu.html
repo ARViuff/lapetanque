@@ -10,17 +10,34 @@
 <style>
     .menucontainer{
         display: grid;
-        grid-template-rows: 0.1fr 1fr ;
+        grid-template-columns: 1fr 1fr 1fr ;
         place-content: start center;
+        gap: 20px;
     }
 
-    #menucontent{
+    #menucontent1{
         display: grid;
         grid-template-columns: 0.1fr 1fr 0.2fr;
+        grid-column: 1/2;
+    }
+    #menucontent2{
+        display: grid;
+        grid-template-columns: 0.1fr 1fr 0.2fr;
+        grid-column: 2/3;
+    }
+    #menucontent3{
+        display: grid;
+        grid-template-columns: 0.1fr 1fr 0.2fr;
+        grid-column: 3/4;
+    }
+
+    h1, h3{
+        grid-column: 1/4;
     }
 
     .nr{
         grid-column: 1/2;
+        text-align: center;
     }
 
     .indhold{
@@ -33,7 +50,8 @@
     }
 </style>
     <main>
-        <div class="menucontainer"><h1>Les Spécialites</h1><div id="menucontent"><p class="nr">1.</p><p class="indhold">Escargots au beurre persillé
+        <div class="menucontainer">
+        <div id="menucontent1"><h1>Les Spécialites</h1><p class="nr">1.</p><p class="indhold">Escargots au beurre persillé
 Snegle m. persillesmør</p><p class="indhold">6stk</p><p class="pris">99,-</p><p class="indhold">12stk</p><p class="pris">152,-</p> <br> <p class="nr">2.</p><p class="indhold">Soupé de poisson bretonne<br>Fiskesuppe m. ost og croutoner</p>
 <p class="pris">104,-</p><br> <p class="nr">3.</p><p class="indhold">Quiche maison avec salade Husets tærte m. salat</p><p class="pris">103,-</p><br><p class="nr">4.</p>
 <p class="indhold"> Salade de Chévre chaud<br>Salat med gratineret gedeost,<br>sorte oliven og valnødder<br> + luftørret skinke	</p><p class="pris"><br><br><br>109,-</p><br><p class="nr">5.</p> <p class="indhold">Salade lyonnaise<br>
@@ -53,6 +71,138 @@ Salat m. savteret bacon,<br>pocheret æg og croutoner</p> <p class="pris">105,-<
 <p class="nr">13.</p>
 <p class="indhold">Croque Madame avec salade<br>Croque Monsieur m. spejlæg</p>
 <p class="pris">99,-</p>
+        </div>
+        <div id="menucontent2">
+            <h1>Les Galettes</h1>
+            <h3>Boghvedepandekager (glutenfri)</h3>
+            <p class="nr">21.</p>
+            <p class="indhold">Oeuf brouillé<br>Røræg</p>
+            <p class="pris">57,-</p>
+            <p class="nr">22.</p>
+            <p class="indhold">Jambon<br>Skinke</p>
+            <p class="pris">58,-</p>
+            <p class="nr">23.</p>
+            <p class="indhold">Fromage<br>EmmentalerOst</p>
+            <p class="pris">57,-</p>
+            <p class="nr">24.</p>
+            <p class="indhold">Jambon et oeuf<br>Skinke og æg</p>
+            <p class="pris">67,-</p>
+            <p class="nr">25.</p>
+            <p class="indhold">Jambon et fromage<br>Skinke og emmetalerost</p>
+            <p class="pris">67,-</p>
+            <p class="nr">26.</p>
+            <p class="indhold">Oeuf et fromage<br>Æg og emmentalerost</p>
+            <p class="pris">67,-</p>
+            <p class="nr">27.</p>
+            <p class="indhold">Grenobloise<br>Gedeost med valnødder og honning</p>
+            <p class="pris">109,-</p>
+            <p class="nr">28.</p>
+            <p class="indhold">Rustique<br>Gedeost og spinat</p>
+            <p class="pris">114,-</p>
+            <p class="nr">29.</p>
+            <p class="indhold">Fermière<br>Bacon, æg og spinat</p>
+            <p class="pris">114,-</p>
+            <p class="nr">30.</p>
+            <p class="indhold">La campagne<br>Gedeost, løg-tomat sauce, bacon</p>
+            <p class="pris">114,-</p>
+            <p class="nr">31.</p>
+            <p class="indhold">Complete<br>Skinke, æg og emmentaler (+ champignon 102,-)</p>
+            <p class="pris">99,-</p>
+            <p class="nr">32.</p>
+            <p class="indhold">Yannick<br>Skinke, æg, ost, løgkompot (lavet på cider),<br>Tomat og ansjoser</p>
+            <p class="pris">114,-</p>
+            <p class="nr">33.</p>
+            <p class="indhold">La Pétanque<br>Bacon eller skinke, æg, champignon,<br> ost og purløg</p>
+            <p class="pris">118,-</p>
+            <p class="nr">34.</p>
+            <p class="indhold">Poulard<br>Kylling, creme fraiche rørt med spidskommen, løg ,tomat og ost.</p>
+            <p class="pris">118,-</p>
+            <p class="nr">35.</p>
+            <p class="indhold">Paysanne<br>Lufttørretskinke, kartofler, tomat,<br>champignon, ost og løgkompot (lavet på cider)</p>
+            <p class="pris">118,-</p>
+            <p class="nr">36.</p>
+            <p class="indhold">Savoie<br>Bacon , tartiflette ost (Reblochon - agtig),<br>creme fraiche , kartoffel og  løg</p>
+            <p class="pris">118,-</p>
+            <p class="nr">37.</p>
+            <p class="indhold">La Roulée à maman<br>(Mors rullede) - Bechamelsauce,<br>skinke, champignon og emmentaler ost</p>
+            <p class="pris">114,-</p>
+            <p class="nr">38.</p>
+            <p class="indhold">La Saumon<br>Relaks fra Daniel Letz m . dildcreme<br>og Tangsalat</p>
+            <p class="pris">129,-</p>
+            <p class="nr">39.</p>
+            <p class="indhold">La catalane (chefen’s Favorit)<br>Æg, løg, Blåost, stærk krydret pølse<br>og valnødder</p>
+            <p class="pris">126,-</p>
+            <p class="nr">40.</p>
+            <p class="indhold">La Brie de Meaux<br>Brie De Meaux, bacon, sauterede æbler<br>og løgkompot lavet på cider.<br>Serveras med Valnøddesalat</p>
+            <p class="pris">129,-</p>
+
+        </div>
+        <div id="menucontent3">
+    <h1>Les Galettes</h1>
+    <h3>Boghvedepandekager (glutenfri)</h3>
+    <p class="nr">21.</p>
+    <p class="indhold"></p>
+    <p class="pris"></p>
+    <p class="nr">22.</p>
+    <p class="indhold"></p>
+    <p class="pris"></p>
+    <p class="nr"></p>
+    <p class="indhold"></p>
+    <p class="pris"></p>
+    <p class="nr"></p>
+    <p class="indhold"></p>
+    <p class="pris"></p>
+    <p class="nr"></p>
+    <p class="indhold"></p>
+    <p class="pris"></p>
+    <p class="nr"></p>
+    <p class="indhold"></p>
+    <p class="pris"></p>
+    <p class="nr"></p>
+    <p class="indhold"></p>
+    <p class="pris"></p>
+    <p class="nr"></p>
+    <p class="indhold"></p>
+    <p class="pris"></p>
+    <p class="nr"></p>
+    <p class="indhold"></p>
+    <p class="pris"></p>
+    <p class="nr"></p>
+    <p class="indhold"></p>
+    <p class="pris"></p>
+    <p class="nr"></p>
+    <p class="indhold"></p>
+    <p class="pris"></p>
+    <p class="nr"></p>
+    <p class="indhold"></p>
+    <p class="pris"></p>
+    <p class="nr"></p>
+    <p class="indhold"></p>
+    <p class="pris"></p>
+    <p class="nr"></p>
+    <p class="indhold"></p>
+    <p class="pris"></p>
+    <p class="nr"></p>
+    <p class="indhold"></p>
+    <p class="pris"></p>
+    <p class="nr"></p>
+    <p class="indhold"></p>
+    <p class="pris"></p>
+    <p class="nr"></p>
+    <p class="indhold"></p>
+    <p class="pris"></p>
+    <p class="nr"></p>
+    <p class="indhold"></p>
+    <p class="pris"></p>
+    <p class="nr"></p>
+    <p class="indhold"></p>
+    <p class="pris"></p>
+    <p class="nr"></p>
+    <p class="indhold"></p>
+    <p class="pris"></p>
+
+</div>
+
 </div></div>
     </main>
    <!--  <script src="../Scripts/login.js"></script> -->
