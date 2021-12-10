@@ -1,0 +1,186 @@
+
+.shadow{
+	box-shadow: rgb(219, 223, 228) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+/** ---------- Desktop View START ---------- */
+
+header{
+    height: 100px;
+    background-color: lightblue;
+}
+
+/* Section Set-up */
+
+#section1{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    height: 500px;
+}
+
+/* Menu Options */
+
+h2{
+    padding: 10px 5px;
+    margin: 0%;
+    box-shadow: 0;
+    transition: 0.5s;
+}
+#menu-menu hr{
+    height: 3px;
+    background-color: rgb(228, 228, 228);
+    border: none;
+    padding: 0%;
+    margin: 1% 0%;
+}
+
+
+/* Menukort Set-up */
+
+.menucontainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        place-content: start center;
+        gap: 20px;
+        /* display: none; */
+        overflow-y: scroll;
+    }
+.menucontent1, .menucontent2, .menucontent3, .menucontent4, .menucontent5, .menucontent6{
+        display: grid;
+        grid-template-columns: 0.1fr 1fr 0.2fr;
+        background-color: rgb(252, 243, 232);
+        height: fit-content;
+    }
+
+    .menucontainer h1, h3{
+        grid-column: 1/4;
+    }
+ .menucontainer .nr{
+        grid-column: 1/2;
+        text-align: center;
+        padding-right: 10px;
+    }
+
+ .menucontainer .indhold{
+        grid-column: 2/3;
+    }
+
+ .menucontainer .pris{
+        grid-column: 3/4;
+        text-align: end;
+    } 
+
+
+    .hide{
+    display: none;
+}
+
+/** ---------- Desktop View START ---------- */
+
+
+
+
+/** ---------- Mobile View START ---------- */
+@media (max-width: 600px) {
+    
+.menucontainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        place-content: start center;
+        gap: 20px;
+        overflow: visible;
+    }
+
+    .menucontent1{
+        display: grid;
+        grid-template-columns: 0.1fr 1fr 0.2fr;
+        grid-column: 1/2;
+        background-color: rgb(252, 243, 232);
+        height: fit-content
+    }
+    .menucontent2{
+        display: grid;
+        grid-template-columns: 0.1fr 1fr 0.2fr;
+        grid-column: 2/3;
+        background-color: rgb(252, 243, 232);
+        height: fit-content
+    }
+    .menucontent3{
+        display: grid;
+        grid-template-columns: 0.1fr 1fr 0.2fr;
+        grid-column: 3/4;
+        background-color: rgb(252, 243, 232);
+        height: fit-content
+    }
+    .menucontent4{
+        display: grid;
+        grid-template-columns: 0fr 1fr 0.2fr;
+        grid-column: 1/2;
+        background-color: rgb(252, 243, 232);
+        height: fit-content
+    }
+    .menucontent5{
+        display: grid;
+        grid-template-columns: 0fr 1fr 0.2fr;
+        grid-column: 2/3;
+        background-color: rgb(252, 243, 232);
+        height: fit-content
+    }
+    .menucontent6{
+        display: grid;
+        grid-template-columns: 0fr 1fr 0.2fr;
+        grid-column: 3/4;
+        background-color: rgb(252, 243, 232);
+        height: fit-content
+    }
+
+   .menucontainer, h1, h3{
+        grid-column: 1/4;
+    }
+
+    .menucontainer, .nr{
+        grid-column: 1/2;
+        text-align: center;
+        padding-right: 10px;
+    }
+
+    .menucontainer, .indhold{
+        grid-column: 2/3;
+    }
+
+    .menucontainer, .pris{
+        grid-column: 3/4;
+        text-align: end;
+    }    
+}
+
+/** ---------- Mobile View SLUT ---------- */
+
+
+
+
+
+
+/** ---------- KEYFRAMES START ---------- */
+
+@-webkit-keyframes shadow-drop-tb {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 -12px 20px -12px rgba(0, 0, 0, 0.35), 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 -12px 20px -12px rgba(0, 0, 0, 0.35), 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+  }
+}
+@keyframes shadow-drop-tb {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 -12px 20px -12px rgba(0, 0, 0, 0.35), 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 -12px 20px -12px rgba(0, 0, 0, 0.35), 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+  }
+}
