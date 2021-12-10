@@ -20,6 +20,7 @@ const menukort6 = document.querySelector(".menucontent6");
 
 
 //* ---------- Mobil slider ---------- //
+/*Link Til Youtube Tutorial: https://youtu.be/5bxFSOA5JYo */
 
 const slider = document.querySelector(".slider-container"),
   slides = Array.from(document.querySelectorAll(".slide"));
