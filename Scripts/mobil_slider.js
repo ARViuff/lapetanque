@@ -1,5 +1,5 @@
 
-
+//* ---------- Mobil slider ---------- //
 
 const slider = document.querySelector(".slider-container"),
   slides = Array.from(document.querySelectorAll(".slide"));
@@ -89,53 +89,70 @@ function setSliderPosition() {
 }
 
 
-//* ----------- Observer -----------//
 
+
+
+//* ---------- Observer(Tjekker om element kan ses på skærmen) ---------- //
+
+
+
+// Variabler //
 const menu1 = document.querySelector("#menucard1")
 const menu2 = document.querySelector("#menucard2")
 const menu3 = document.querySelector("#menucard3")
 
 
+//* Observer 1 ///
 
+
+// en varible der starter en arrow funtion. Den opretter en "new IntersectionObserver" som tjekker om vores element".text3"
+// kan ses i vores Viewport.
+
+// entries is an array of IntersectionObserverEntry objects. Each such object represents information about a given target's intersection with the root. i dette tilfælde vores element.
 let observer1 = new IntersectionObserver(
   function (entries) {
-    // isIntersecting is true when element and viewport are overlapping
-    // isIntersecting is false when element and viewport don't overlap
+    // if function der tjekker om "entries" rammmer root. [0] er placeret som en threshold på "0" da en treshold på 1 ikke kan garanteres på alle browers
     if (entries[0].isIntersecting === true) {
       console.log("Element has just become visible in screen1", this);
-      /* heading1.classList.remove("displaynone") */
+      // Tilføjer eller fjerner en klasse
       menu1.classList.remove("hidded");
       menu2.classList.add("hidded");
       menu3.classList.add("hidded");
-    } else if (entries[0].isIntersecting === false) {
-      /* heading1.classList.add("displaynone"); */
     }
   },
+  //Her kan vi i stedet skrive vores threshold på hvor meget af elementet kan ses på siden inden vores if statement starter. skala fra (0-1)
   { threshold: [0.5] }
 );
-
+// obsavere det valgt element i.e ".text3". Den skal står efter vores "new IntersectionObserver"
 observer1.observe(document.querySelector(".text1"));
 
+
+//* Observer 2 ///
+
+
+// en varible der starter en arrow funtion. Den opretter en "new IntersectionObserver" som tjekker om vores element".text3"
+// kan ses i vores Viewport.
+
+// entries is an array of IntersectionObserverEntry objects. Each such object represents information about a given target's intersection with the root. i dette tilfælde vores element.
 let observer2 = new IntersectionObserver(
   function (entries) {
-    // isIntersecting is true when element and viewport are overlapping
-    // isIntersecting is false when element and viewport don't overlap
+    // if function der tjekker om "entries" rammmer root. [0] er placeret som en threshold på "0" da en treshold på 1 ikke kan garanteres på alle browers
     if (entries[0].isIntersecting === true) {
       console.log("Element has just become visible in screen1", this);
-      /* heading1.classList.remove("displaynone") */
+      // Tilføjer eller fjerner en klasse
       menu1.classList.add("hidded");
       menu3.classList.add("hidded");
-      menu2.classList.remove("hidded")
-    } else if (entries[0].isIntersecting === false) {
-      /* heading1.classList.add("displaynone"); */
+      menu2.classList.remove("hidded");
     }
   },
+  //Her kan vi i stedet skrive vores threshold på hvor meget af elementet kan ses på siden inden vores if statement starter. skala fra (0-1)
   { threshold: [1] }
 );
-
+// obsavere det valgt element i.e ".text3". Den skal står efter vores "new IntersectionObserver"
 observer2.observe(document.querySelector(".text2"));
 
 
+//* Observer 3 ///
 
 
 // en varible der starter en arrow funtion. Den opretter en "new IntersectionObserver" som tjekker om vores element".text3"
@@ -147,6 +164,7 @@ let observer3 = new IntersectionObserver(
     // if function der tjekker om "entries" rammmer root. [0] er placeret som en threshold på "0" da en treshold på 1 ikke kan garanteres på alle browers
     if (entries[0].isIntersecting === true) {
       console.log("maybe it worked", this);
+      // Tilføjer eller fjerner en klasse
       menu1.classList.add("hidded");
       menu3.classList.remove("hidded");
       menu2.classList.add("hidded");
