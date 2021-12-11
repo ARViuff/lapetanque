@@ -1,0 +1,257 @@
+@media (min-width: 600px){
+
+.shadow{
+	box-shadow: rgb(219, 223, 228) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.slider-container{
+  display: none;
+}
+/** ---------- Desktop View START ---------- */
+
+header{
+    height: 100px;
+    background-color: lightblue;
+}
+
+/* Section Set-up */
+
+#section1{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    height: 500px;
+}
+
+/* Menu Options */
+
+h2{
+    padding: 10px 5px;
+    margin: 0%;
+    box-shadow: 0;
+    transition: 0.5s;
+}
+#menu-menu hr{
+    height: 3px;
+    background-color: rgb(228, 228, 228);
+    border: none;
+    padding: 0%;
+    margin: 1% 0%;
+}
+
+
+/* Menukort Set-up */
+
+.menucontainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        place-content: start center;
+        gap: 20px;
+        /* display: none; */
+        overflow-y: scroll;
+        order: 2;
+    }
+.menucontent1, .menucontent2, .menucontent3, .menucontent4, .menucontent5, .menucontent6{
+        display: grid;
+        grid-template-columns: 0.1fr 1fr 0.2fr;
+        background-color: rgb(252, 243, 232);
+        height: fit-content;
+    }
+
+    .menucontainer h1, h3{
+        grid-column: 1/4;
+    }
+ .menucontainer .nr{
+        grid-column: 1/2;
+        text-align: center;
+        padding-right: 10px;
+    }
+
+ .menucontainer .indhold{
+        grid-column: 2/3;
+    }
+
+ .menucontainer .pris{
+        grid-column: 3/4;
+        text-align: end;
+    } 
+
+
+
+}
+/** ---------- Desktop View START ---------- */
+
+
+
+
+/** ---------- Mobile View START ---------- */
+@media (max-width: 600px) {
+
+#menu-menudesktop{
+  display: none;
+}
+
+header{
+    height: 100px;
+    background-color: lightskyblue;
+}
+
+section{
+    display: grid;
+    height: 100vh;
+}
+
+hr{
+    display: none;
+}
+    
+.menucontainer{
+/*         display: grid;
+        grid-template-columns: 1fr 1fr 1fr ; 
+        place-content: start center;
+        gap: 20px;*/
+        overflow: scroll; 
+        margin-bottom: 200px;
+    }
+
+.menucontent1, .menucontent2, .menucontent3, .menucontent4, .menucontent5, .menucontent6{
+        display: grid;
+        grid-template-columns: 0.1fr 1fr 0.2fr;
+        background-color: rgb(252, 243, 232);
+        height: fit-content;
+        padding: 0% 10%;
+        overflow:scroll;
+        gap: 15px;
+    }
+
+
+   .menucontainer h1, h3{
+        grid-column: 1/4;
+    }
+
+    .menucontainer .nr{
+        grid-column: 1/2;
+        text-align: center;
+        padding-right: 10px;
+    }
+
+    .menucontainer .indhold{
+        grid-column: 2/3;
+    }
+
+    .menucontainer .pris{
+        grid-column: 3/4;
+        text-align: end;
+    }
+
+/* Slider CSS  */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  line-height: 2;
+  background-color: rgb(252, 243, 232);
+}
+
+.slider-container {
+  position: fixed;
+  height: 100px;
+  display: inline-flex;
+  overflow: hidden;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+  cursor: grab;
+  background-color: rgb(255, 255, 255);
+  bottom: 0px;
+}
+
+.slide {
+  max-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  user-select: none;
+}
+
+.slide h1 {
+  max-width: 100%;
+  max-height: 60%;
+  transition: transform 0.3s ease-in-out;
+  background-color: rgb(207, 207, 207);
+  border-radius: 10px 10px 10px 10px;
+  text-align: center;
+  padding: 0% 5% 15% 5%;
+}
+
+.slide h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.slide h4 {
+  font-size: 1.3rem;
+}
+
+.btn {
+  background-color: #444;
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+}
+
+.grabbing {
+  /* cursor: grabbing; */
+}
+
+.grabbing .slide img {
+  transform: scale(0.9);
+}
+
+
+
+
+}
+
+/** ---------- Mobile View SLUT ---------- */
+
+    .hide{
+    display: none;
+}
+
+
+
+
+/** ---------- KEYFRAMES START ---------- */
+
+@-webkit-keyframes shadow-drop-tb {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 -12px 20px -12px rgba(0, 0, 0, 0.35), 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 -12px 20px -12px rgba(0, 0, 0, 0.35), 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+  }
+}
+@keyframes shadow-drop-tb {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 -12px 20px -12px rgba(0, 0, 0, 0.35), 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 -12px 20px -12px rgba(0, 0, 0, 0.35), 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+  }
+}

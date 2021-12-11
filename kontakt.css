@@ -1,0 +1,26 @@
+img {
+    width: 100%;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+article {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+}
+
+.kontakt_info {
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.kortet {
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
