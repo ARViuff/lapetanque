@@ -381,12 +381,12 @@ menuDitem5.addEventListener("mouseenter", () => {
   menukort4.classList.add("hide");
   menukort5.classList.remove("hide");
   menukort6.classList.add("hide");
-  menuitem1.classList.remove("shadow");
-  menuitem2.classList.remove("shadow");
-  menuitem3.classList.remove("shadow");
-  menuitem4.classList.remove("shadow");
-  menuitem5.classList.add("shadow");
-  menuitem6.classList.remove("shadow");
+  menuDitem1.classList.remove("shadow");
+  menuDitem2.classList.remove("shadow");
+  menuDitem3.classList.remove("shadow");
+  menuDitem4.classList.remove("shadow");
+  menuDitem5.classList.add("shadow");
+  menuDitem6.classList.remove("shadow");
 }) ;
 menuDitem5.addEventListener("click", () => {
   console.log("menukort 5")
