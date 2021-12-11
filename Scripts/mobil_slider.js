@@ -1,11 +1,11 @@
 /* Varibles */
 //Menuitem
-const menuitem1 = document.querySelector(".menuitem1")
-const menuitem2 = document.querySelector(".menuitem2")
-const menuitem3 = document.querySelector(".menuitem3")
-const menuitem4 = document.querySelector(".menuitem4")
-const menuitem5 = document.querySelector(".menuitem5")
-const menuitem6 = document.querySelector(".menuitem6")
+const menuDitem1 = document.querySelector(".menuDitem1")
+const menuDitem2 = document.querySelector(".menuDitem2")
+const menuDitem3 = document.querySelector(".menuDitem3")
+const menuDitem4 = document.querySelector(".menuDitem4")
+const menuDitem5 = document.querySelector(".menuDitem5")
+const menuDitem6 = document.querySelector(".menuDitem6")
 
 //Shadow
 const shadow = document.querySelector(".shadow");
@@ -117,9 +117,12 @@ function setPositionByIndex() {
 
 
 // Variabler //
-const menu1 = document.querySelector("#menucard1")
-const menu2 = document.querySelector("#menucard2")
-const menu3 = document.querySelector("#menucard3")
+const menu1 = document.querySelector(".menuMitem1");
+const menu2 = document.querySelector(".menuMitem2");
+const menu3 = document.querySelector(".menuMitem3");
+const menu4 = document.querySelector(".menuMitem4");
+const menu5 = document.querySelector(".menuMitem5");
+const menu6 = document.querySelector(".menuMitem6");
 
 
 //* Observer 1 ///
@@ -133,74 +136,122 @@ let observer1 = new IntersectionObserver(
   function (entries) {
     // if function der tjekker om "entries" rammmer root. [0] er placeret som en threshold på "0" da en treshold på 1 ikke kan garanteres på alle browers
     if (entries[0].isIntersecting === true) {
-      console.log("Element has just become visible in screen1", this);
+      console.log("Les Spécialites", this);
       // Tilføjer eller fjerner en klasse
-      menu1.classList.remove("hidded");
-      menu2.classList.add("hidded");
-      menu3.classList.add("hidded");
+      menukort1.classList.remove("hide");
+      menukort2.classList.add("hide");
+      menukort3.classList.add("hide");
+      menukort4.classList.add("hide");
+      menukort5.classList.add("hide");
+      menukort6.classList.add("hide");
     }
   },
   //Her kan vi i stedet skrive vores threshold på hvor meget af elementet kan ses på siden inden vores if statement starter. skala fra (0-1)
   { threshold: [0.5] }
 );
 // obsavere det valgt element i.e ".text3". Den skal står efter vores "new IntersectionObserver"
-/* observer1.observe(document.querySelector(".text1")); */
+observer1.observe(menu1);
 
 
 //* Observer 2 ///
 
-
-// en varible der starter en arrow funtion. Den opretter en "new IntersectionObserver" som tjekker om vores element".text3"
-// kan ses i vores Viewport.
-
-// entries is an array of IntersectionObserverEntry objects. Each such object represents information about a given target's intersection with the root. i dette tilfælde vores element.
 let observer2 = new IntersectionObserver(
   function (entries) {
-    // if function der tjekker om "entries" rammmer root. [0] er placeret som en threshold på "0" da en treshold på 1 ikke kan garanteres på alle browers
     if (entries[0].isIntersecting === true) {
-      console.log("Element has just become visible in screen1", this);
-      // Tilføjer eller fjerner en klasse
-      menu1.classList.add("hidded");
-      menu3.classList.add("hidded");
-      menu2.classList.remove("hidded");
+      console.log("Les Galettes", this);
+      menukort1.classList.add("hide");
+      menukort2.classList.remove("hide");
+      menukort3.classList.add("hide");
+      menukort4.classList.add("hide");
+      menukort5.classList.add("hide");
+      menukort6.classList.add("hide");
     }
   },
-  //Her kan vi i stedet skrive vores threshold på hvor meget af elementet kan ses på siden inden vores if statement starter. skala fra (0-1)
   { threshold: [1] }
 );
-// obsavere det valgt element i.e ".text3". Den skal står efter vores "new IntersectionObserver"
-/* observer2.observe(document.querySelector(".text2")); */
-
+observer2.observe(menu2);
 
 //* Observer 3 ///
 
-
-// en varible der starter en arrow funtion. Den opretter en "new IntersectionObserver" som tjekker om vores element".text3"
-// kan ses i vores Viewport.
-
-// entries is an array of IntersectionObserverEntry objects. Each such object represents information about a given target's intersection with the root. i dette tilfælde vores element.
 let observer3 = new IntersectionObserver(
   (entries) => {
-    // if function der tjekker om "entries" rammmer root. [0] er placeret som en threshold på "0" da en treshold på 1 ikke kan garanteres på alle browers
     if (entries[0].isIntersecting === true) {
-      console.log("maybe it worked", this);
-      // Tilføjer eller fjerner en klasse
-      menu1.classList.add("hidded");
-      menu3.classList.remove("hidded");
-      menu2.classList.add("hidded");
+      console.log("Les Crêpes", this);
+       menukort1.classList.add("hide");
+       menukort2.classList.add("hide");
+       menukort3.classList.remove("hide");
+       menukort4.classList.add("hide");
+       menukort5.classList.add("hide");
+       menukort6.classList.add("hide");
     }
   },
-  //Her kan vi i stedet skrive vores threshold på hvor meget af elementet kan ses på siden inden vores if statement starter. skala fra (0-1)
   { threshold: [1] }
 );
+observer3.observe(menu3);
 
-// obsavere det valgt element i.e ".text3". Den skal står efter vores "new IntersectionObserver"
-/* observer3.observe(document.querySelector(".text3")) */
+//* Observer 4 ///
+
+let observer4 = new IntersectionObserver(
+  (entries) => {
+    if (entries[0].isIntersecting === true) {
+      console.log("Les Crêpes", this);
+      menukort1.classList.add("hide");
+      menukort2.classList.add("hide");
+      menukort3.classList.add("hide");
+      menukort4.classList.remove("hide");
+      menukort5.classList.add("hide");
+      menukort6.classList.add("hide");
+    }
+  },
+  { threshold: [1] }
+);
+observer4.observe(menu4);
+
+//* Observer 5 ///
+
+let observer5 = new IntersectionObserver(
+  (entries) => {
+    if (entries[0].isIntersecting === true) {
+      console.log("Les Crêpes", this);
+      menukort1.classList.add("hide");
+      menukort2.classList.add("hide");
+      menukort3.classList.add("hide");
+      menukort4.classList.add("hide");
+      menukort5.classList.remove("hide");
+      menukort6.classList.add("hide");
+    }
+  },
+  { threshold: [1] }
+);
+observer5.observe(menu5);
+
+//* Observer 6 ///
+
+let observer6 = new IntersectionObserver(
+  (entries) => {
+    if (entries[0].isIntersecting === true) {
+      console.log("Les Crêpes", this);
+      menukort1.classList.add("hide");
+      menukort2.classList.add("hide");
+      menukort3.classList.add("hide");
+      menukort4.classList.add("hide");
+      menukort5.classList.add("hide");
+      menukort6.classList.remove("hide");
+    }
+  },
+  { threshold: [1] }
+);
+observer6.observe(menu6);
+
+
+
+
+
 
 
 //* ---------- Desktop Menu ---------- //
 
-menuitem1.addEventListener("mouseenter", () => {
+menuDitem1.addEventListener("mouseenter", () => {
   console.log("menukort 1")
   menukort1.classList.remove("hide")
   menukort2.classList.add("hide");
@@ -208,15 +259,15 @@ menuitem1.addEventListener("mouseenter", () => {
   menukort4.classList.add("hide");
   menukort5.classList.add("hide");
   menukort6.classList.add("hide");
-  menuitem1.classList.add("shadow");
-  menuitem2.classList.remove("shadow");
-  menuitem3.classList.remove("shadow");
-  menuitem4.classList.remove("shadow");
-  menuitem5.classList.remove("shadow");
-  menuitem6.classList.remove("shadow");
+  menuDitem1.classList.add("shadow");
+  menuDitem2.classList.remove("shadow");
+  menuDitem3.classList.remove("shadow");
+  menuDitem4.classList.remove("shadow");
+  menuDitem5.classList.remove("shadow");
+  menuDitem6.classList.remove("shadow");
 
 }) ;
-menuitem1.addEventListener("click", () => {
+menuDitem1.addEventListener("click", () => {
   console.log("menukort 1")
   menukort1.classList.remove("hide");
   menukort2.classList.add("hide");
@@ -224,14 +275,14 @@ menuitem1.addEventListener("click", () => {
   menukort4.classList.add("hide");
   menukort5.classList.add("hide");
   menukort6.classList.add("hide");
-  menuitem1.classList.add("shadow");
-  menuitem2.classList.remove("shadow");
-  menuitem3.classList.remove("shadow");
-  menuitem4.classList.remove("shadow");
-  menuitem5.classList.remove("shadow");
-  menuitem6.classList.remove("shadow");
+  menuDitem1.classList.add("shadow");
+  menuDitem2.classList.remove("shadow");
+  menuDitem3.classList.remove("shadow");
+  menuDitem4.classList.remove("shadow");
+  menuDitem5.classList.remove("shadow");
+  menuDitem6.classList.remove("shadow");
 }) ;
-menuitem2.addEventListener("mouseenter", () => {
+menuDitem2.addEventListener("mouseenter", () => {
   console.log("menukort 2")
   menukort1.classList.add("hide")
   menukort2.classList.remove("hide");
@@ -239,15 +290,15 @@ menuitem2.addEventListener("mouseenter", () => {
   menukort4.classList.add("hide");
   menukort5.classList.add("hide");
   menukort6.classList.add("hide");
-  menuitem1.classList.remove("shadow");
-  menuitem2.classList.add("shadow");
-  menuitem3.classList.remove("shadow");
-  menuitem4.classList.remove("shadow");
-  menuitem5.classList.remove("shadow");
-  menuitem6.classList.remove("shadow");
+  menuDitem1.classList.remove("shadow");
+  menuDitem2.classList.add("shadow");
+  menuDitem3.classList.remove("shadow");
+  menuDitem4.classList.remove("shadow");
+  menuDitem5.classList.remove("shadow");
+  menuDitem6.classList.remove("shadow");
   
 }) ;
-menuitem2.addEventListener("click", () => {
+menuDitem2.addEventListener("click", () => {
   console.log("menukort 2")
   menukort1.classList.add("hide");
   menukort2.classList.remove("hide");
@@ -255,14 +306,14 @@ menuitem2.addEventListener("click", () => {
   menukort4.classList.add("hide");
   menukort5.classList.add("hide");
   menukort6.classList.add("hide");
-   menuitem1.classList.remove("shadow");
-   menuitem2.classList.add("shadow");
-   menuitem3.classList.remove("shadow");
-   menuitem4.classList.remove("shadow");
-   menuitem5.classList.remove("shadow");
-   menuitem6.classList.remove("shadow");
+  menuDitem1.classList.remove("shadow");
+  menuDitem2.classList.add("shadow");
+  menuDitem3.classList.remove("shadow");
+  menuDitem4.classList.remove("shadow");
+  menuDitem5.classList.remove("shadow");
+  menuDitem6.classList.remove("shadow");
 }) ;
-menuitem3.addEventListener("mouseenter", () => {
+menuDitem3.addEventListener("mouseenter", () => {
   console.log("menukort 3")
   menukort1.classList.add("hide")
   menukort2.classList.add("hide");
@@ -270,14 +321,14 @@ menuitem3.addEventListener("mouseenter", () => {
   menukort4.classList.add("hide");
   menukort5.classList.add("hide");
   menukort6.classList.add("hide");
-   menuitem1.classList.remove("shadow");
-   menuitem2.classList.remove("shadow");
-   menuitem3.classList.add("shadow");
-   menuitem4.classList.remove("shadow");
-   menuitem5.classList.remove("shadow");
-   menuitem6.classList.remove("shadow");
+  menuDitem1.classList.remove("shadow");
+  menuDitem2.classList.remove("shadow");
+  menuDitem3.classList.add("shadow");
+  menuDitem4.classList.remove("shadow");
+  menuDitem5.classList.remove("shadow");
+  menuDitem6.classList.remove("shadow");
 }) ;
-menuitem3.addEventListener("click", () => {
+menuDitem3.addEventListener("click", () => {
   console.log("menukort 3")
   menukort1.classList.add("hide");
   menukort2.classList.add("hide");
@@ -285,14 +336,14 @@ menuitem3.addEventListener("click", () => {
   menukort4.classList.add("hide");
   menukort5.classList.add("hide");
   menukort6.classList.add("hide");
-  menuitem1.classList.remove("shadow");
-  menuitem2.classList.remove("shadow");
-  menuitem3.classList.add("shadow");
-  menuitem4.classList.remove("shadow");
-  menuitem5.classList.remove("shadow");
-  menuitem6.classList.remove("shadow");
+  menuDitem1.classList.remove("shadow");
+  menuDitem2.classList.remove("shadow");
+  menuDitem3.classList.add("shadow");
+  menuDitem4.classList.remove("shadow");
+  menuDitem5.classList.remove("shadow");
+  menuDitem6.classList.remove("shadow");
 }) ;
-menuitem4.addEventListener("mouseenter", () => {
+menuDitem4.addEventListener("mouseenter", () => {
   console.log("menukort 4")
   menukort1.classList.add("hide")
   menukort2.classList.add("hide");
@@ -300,14 +351,14 @@ menuitem4.addEventListener("mouseenter", () => {
   menukort4.classList.remove("hide");
   menukort5.classList.add("hide");
   menukort6.classList.add("hide");
-   menuitem1.classList.remove("shadow");
-   menuitem2.classList.remove("shadow");
-   menuitem3.classList.remove("shadow");
-   menuitem4.classList.add("shadow");
-   menuitem5.classList.remove("shadow");
-   menuitem6.classList.remove("shadow");
+  menuDitem1.classList.remove("shadow");
+  menuDitem2.classList.remove("shadow");
+  menuDitem3.classList.remove("shadow");
+  menuDitem4.classList.add("shadow");
+  menuDitem5.classList.remove("shadow");
+  menuDitem6.classList.remove("shadow");
 }) ;
-menuitem4.addEventListener("click", () => {
+menuDitem4.addEventListener("click", () => {
   console.log("menukort 4")
   menukort1.classList.add("hide");
   menukort2.classList.add("hide");
@@ -315,14 +366,14 @@ menuitem4.addEventListener("click", () => {
   menukort4.classList.remove("hide");
   menukort5.classList.add("hide");
   menukort6.classList.add("hide");
-  menuitem1.classList.remove("shadow");
-  menuitem2.classList.remove("shadow");
-  menuitem3.classList.remove("shadow");
-  menuitem4.classList.add("shadow");
-  menuitem5.classList.remove("shadow");
-  menuitem6.classList.remove("shadow");
+  menuDitem1.classList.remove("shadow");
+  menuDitem2.classList.remove("shadow");
+  menuDitem3.classList.remove("shadow");
+  menuDitem4.classList.add("shadow");
+  menuDitem5.classList.remove("shadow");
+  menuDitem6.classList.remove("shadow");
 }) ;
-menuitem5.addEventListener("mouseenter", () => {
+menuDitem5.addEventListener("mouseenter", () => {
   console.log("menukort 5")
   menukort1.classList.add("hide")
   menukort2.classList.add("hide");
@@ -337,7 +388,7 @@ menuitem5.addEventListener("mouseenter", () => {
   menuitem5.classList.add("shadow");
   menuitem6.classList.remove("shadow");
 }) ;
-menuitem5.addEventListener("click", () => {
+menuDitem5.addEventListener("click", () => {
   console.log("menukort 5")
   menukort1.classList.add("hide");
   menukort2.classList.add("hide");
@@ -345,14 +396,14 @@ menuitem5.addEventListener("click", () => {
   menukort4.classList.add("hide");
   menukort5.classList.remove("hide");
   menukort6.classList.add("hide");
-  menuitem1.classList.remove("shadow");
-  menuitem2.classList.remove("shadow");
-  menuitem3.classList.remove("shadow");
-  menuitem4.classList.remove("shadow");
-  menuitem5.classList.add("shadow");
-  menuitem6.classList.remove("shadow");
+  menuDitem1.classList.remove("shadow");
+  menuDitem2.classList.remove("shadow");
+  menuDitem3.classList.remove("shadow");
+  menuDitem4.classList.remove("shadow");
+  menuDitem5.classList.add("shadow");
+  menuDitem6.classList.remove("shadow");
 }) ;
-menuitem6.addEventListener("mouseenter", () => {
+menuDitem6.addEventListener("mouseenter", () => {
   console.log("menukort 6")
   menukort1.classList.add("hide")
   menukort2.classList.add("hide");
@@ -360,14 +411,14 @@ menuitem6.addEventListener("mouseenter", () => {
   menukort4.classList.add("hide");
   menukort5.classList.add("hide");
   menukort6.classList.remove("hide");
-  menuitem1.classList.remove("shadow");
-  menuitem2.classList.remove("shadow");
-  menuitem3.classList.remove("shadow");
-  menuitem4.classList.remove("shadow");
-  menuitem5.classList.remove("shadow");
-  menuitem6.classList.add("shadow");
+  menuDitem1.classList.remove("shadow");
+  menuDitem2.classList.remove("shadow");
+  menuDitem3.classList.remove("shadow");
+  menuDitem4.classList.remove("shadow");
+  menuDitem5.classList.remove("shadow");
+  menuDitem6.classList.add("shadow");
 }) ;
-menuitem6.addEventListener("click", () => {
+menuDitem6.addEventListener("click", () => {
   console.log("menukort 6")
   menukort1.classList.add("hide");
   menukort2.classList.add("hide");
@@ -375,11 +426,11 @@ menuitem6.addEventListener("click", () => {
   menukort4.classList.add("hide");
   menukort5.classList.add("hide");
   menukort6.classList.remove("hide");
-  menuitem1.classList.remove("shadow");
-  menuitem2.classList.remove("shadow");
-  menuitem3.classList.remove("shadow");
-  menuitem4.classList.remove("shadow");
-  menuitem5.classList.remove("shadow");
-  menuitem6.classList.add("shadow");
+  menuDitem1.classList.remove("shadow");
+  menuDitem2.classList.remove("shadow");
+  menuDitem3.classList.remove("shadow");
+  menuDitem4.classList.remove("shadow");
+  menuDitem5.classList.remove("shadow");
+  menuDitem6.classList.add("shadow");
 }) ;
 
