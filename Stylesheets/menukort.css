@@ -18,12 +18,24 @@ header{
 
 #section1{
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 10px;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
     height: 500px;
+    padding-inline: 5%;
 }
 
 /* Menu Options */
+#menu-menudesktop{
+  background-color: darkseagreen;
+  color: white;
+  border-radius: 10px 10px 10px 10px;
+}
+
+#menu-menudesktop div, hr{
+  padding-inline: 3%;
+  width: 85%;
+  
+}
 
 h2{
     padding: 10px 5px;
@@ -31,12 +43,8 @@ h2{
     box-shadow: 0;
     transition: 0.5s;
 }
-#menu-menu hr{
-    height: 3px;
-    background-color: rgb(228, 228, 228);
-    border: none;
-    padding: 0%;
-    margin: 1% 0%;
+#menu-menudesktop hr{
+  color: white;
 }
 
 
@@ -54,7 +62,7 @@ h2{
 .menucontent1, .menucontent2, .menucontent3, .menucontent4, .menucontent5, .menucontent6{
         display: grid;
         grid-template-columns: 0.1fr 1fr 0.2fr;
-        background-color: rgb(252, 243, 232);
+    /*     background-color: rgb(252, 243, 232); */
         height: fit-content;
     }
 
@@ -75,7 +83,11 @@ h2{
         grid-column: 3/4;
         text-align: end;
     } 
-
+  
+#title{
+  grid-column: 1/4;
+  text-align: center;
+}
 
 
 }
