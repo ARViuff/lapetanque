@@ -2,51 +2,62 @@
   margin: 0%;
   padding: 0%;
 }
+main {
+  background-image: url(../gallery/splashimage.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  background-position: center;
+  display: grid;
+}
+
+button {
+  padding: 3px 3px 3px 3px;
+  background-color: black;
+  border-radius: 20%;
+  width: 3.5rem;
+  height: 2.5rem;
+  margin-top: 10px;
+  margin-bottom: 10rem;
+  margin-left: 15rem;
+  border-color: black;
+}
+button a {
+  text-decoration: none;
+  color: white;
+}
 @media (min-width: 0px) and (max-width: 600px) {
-  body {
-    background-image: url(../Gallery/test_pic.JPG);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: auto;
-  }
-
   .pagetext {
-    max-width: 25rem;
-    max-height: 10rem;
-    margin-top: 30rem;
-    border-style: dotted;
-    border-color: black;
-
-    margin-bottom: 20vw;
-    margin-left: 12vw;
+    margin-top: 100%;
   }
   h2 {
-    gap: 2px;
-    padding-bottom: 2px;
+    padding-left: 5rem;
   }
   h1 {
-    padding-top: 1px;
-    padding-left: 30vw;
+    padding-left: 10rem;
   }
 }
+
 @media (min-width: 601px) and (max-width: 1000px) {
   .pagetext {
-    max-width: 25rem;
-    max-height: 10rem;
-    margin-top: 30rem;
-    border-style: dotted;
-    border-color: black;
-
-    margin-bottom: 20vw;
-    margin-left: 12vw;
+    margin-top: 100%;
   }
   h2 {
-    gap: 2px;
-    padding-bottom: 2px;
+    padding-left: 5rem;
   }
   h1 {
-    padding-top: 1px;
-    padding-left: 30vw;
+    padding-left: 10rem;
+  }
+}
+@media (min-width: 1001px) {
+  .pagetext {
+    margin-top: 100%;
+  }
+  h2 {
+    padding-left: 5vw;
+  }
+  h1 {
+    padding-left: 10vw;
   }
 }
