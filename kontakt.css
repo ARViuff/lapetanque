@@ -10,18 +10,23 @@ article {
 }
 
 .kontakt_info {
-  gap: 20px;
-  padding: 30px;
+  gap: 10px;
+  padding: 40px;
   text-align: center;
 }
 
 .kortet {
-  width: 80%;
-  gap: 20px;
-  padding: 30px;
-  justify-content: center;
+  display: flex;
+  place-content: center;
+  padding: 40px;
 }
 
 iframe {
   width: auto;
+  height: 30vw;
 }
+
+ /* det stod i kortet
+  width: 80%;
+  gap: 20px;
+  
