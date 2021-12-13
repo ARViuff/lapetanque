@@ -235,6 +235,10 @@ observer6.observe(menu6);
 
 //* ---------- Desktop Menu ---------- //
 
+// Hej Det overstående høre til en slider til mobil siden. vi arbejder ligenu på en statemachine til den.//
+
+
+
 /* menuDitem2.addEventListener("click", menuFunktion(2));
 
 

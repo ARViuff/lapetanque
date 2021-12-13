@@ -173,7 +173,7 @@ hr{
         height: -moz-fit-content;
         height: fit-content;
         padding: 0% 10%;
-        overflow:scroll;
+        /* overflow:scroll; */
         gap: 15px;
     }
 
