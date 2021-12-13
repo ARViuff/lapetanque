@@ -1,11 +1,11 @@
 /* Varibles */
 //Menuitem
-const menuDitem1 = document.querySelector(".menuDitem1")
-const menuDitem2 = document.querySelector(".menuDitem2")
-const menuDitem3 = document.querySelector(".menuDitem3")
-const menuDitem4 = document.querySelector(".menuDitem4")
-const menuDitem5 = document.querySelector(".menuDitem5")
-const menuDitem6 = document.querySelector(".menuDitem6")
+const menuDitem1 = document.querySelector(".menuDitem1");
+const menuDitem2 = document.querySelector(".menuDitem2");
+const menuDitem3 = document.querySelector(".menuDitem3");
+const menuDitem4 = document.querySelector(".menuDitem4");
+const menuDitem5 = document.querySelector(".menuDitem5");
+const menuDitem6 = document.querySelector(".menuDitem6");
 
 //Shadow
 const shadow = document.querySelector(".shadow");
@@ -17,7 +17,6 @@ const menukort3 = document.querySelector(".menucontent3");
 const menukort4 = document.querySelector(".menucontent4");
 const menukort5 = document.querySelector(".menucontent5");
 const menukort6 = document.querySelector(".menucontent6");
-
 
 //* ---------- Mobil slider ---------- //
 /*Link Til Youtube Tutorial: https://youtu.be/5bxFSOA5JYo */
@@ -108,13 +107,7 @@ function setPositionByIndex() {
   setSliderPosition();
 }
 
-
-
-
-
 //* ---------- Observer(Tjekker om element kan ses på skærmen) ---------- //
-
-
 
 // Variabler //
 const menu1 = document.querySelector(".menuMitem1");
@@ -124,9 +117,7 @@ const menu4 = document.querySelector(".menuMitem4");
 const menu5 = document.querySelector(".menuMitem5");
 const menu6 = document.querySelector(".menuMitem6");
 
-
 //* Observer 1 ///
-
 
 // en varible der starter en arrow funtion. Den opretter en "new IntersectionObserver" som tjekker om vores element".text3"
 // kan ses i vores Viewport.
@@ -152,7 +143,6 @@ let observer1 = new IntersectionObserver(
 // obsavere det valgt element i.e ".text3". Den skal står efter vores "new IntersectionObserver"
 observer1.observe(menu1);
 
-
 //* Observer 2 ///
 
 let observer2 = new IntersectionObserver(
@@ -177,12 +167,12 @@ let observer3 = new IntersectionObserver(
   (entries) => {
     if (entries[0].isIntersecting === true) {
       console.log("Les Crêpes", this);
-       menukort1.classList.add("hide");
-       menukort2.classList.add("hide");
-       menukort3.classList.remove("hide");
-       menukort4.classList.add("hide");
-       menukort5.classList.add("hide");
-       menukort6.classList.add("hide");
+      menukort1.classList.add("hide");
+      menukort2.classList.add("hide");
+      menukort3.classList.remove("hide");
+      menukort4.classList.add("hide");
+      menukort5.classList.add("hide");
+      menukort6.classList.add("hide");
     }
   },
   { threshold: [1] }
@@ -243,32 +233,32 @@ let observer6 = new IntersectionObserver(
 );
 observer6.observe(menu6);
 
-
-
-
-
-
-
 //* ---------- Desktop Menu ---------- //
 
-menuDitem1.addEventListener("mouseenter", () => {
-  console.log("menukort 1")
-  menukort1.classList.remove("hide")
-  menukort2.classList.add("hide");
-  menukort3.classList.add("hide");
-  menukort4.classList.add("hide");
-  menukort5.classList.add("hide");
-  menukort6.classList.add("hide");
-  menuDitem1.classList.add("shadow");
-  menuDitem2.classList.remove("shadow");
-  menuDitem3.classList.remove("shadow");
-  menuDitem4.classList.remove("shadow");
-  menuDitem5.classList.remove("shadow");
-  menuDitem6.classList.remove("shadow");
+// Hej Det overstående høre til en slider til mobil siden. vi arbejder ligenu på en statemachine til den.//
 
-}) ;
-menuDitem1.addEventListener("click", () => {
-  console.log("menukort 1")
+
+
+/* menuDitem2.addEventListener("click", menuFunktion(2));
+
+
+function menuFunktion(nummer) {
+  let menukort = "menukort" + nummer;
+  let menuItem = "menuDitem" + nummer;
+  for (let i = 1; i <= 6; i++) {
+    let menukortVar = "menukort" + i;
+    let menuDVar = "menuDitem" + i;
+    menukortVar.classList.remove("hide");
+    menuDVar.classList.remove("shadow");
+    
+    console.log("ksdn", this);
+  }
+  menukort.classList.add("hide");
+  menuItem.classList.add("shadow");
+} */
+
+menuDitem1.addEventListener("mouseenter", () => {
+  console.log("menukort 1");
   menukort1.classList.remove("hide");
   menukort2.classList.add("hide");
   menukort3.classList.add("hide");
@@ -281,10 +271,25 @@ menuDitem1.addEventListener("click", () => {
   menuDitem4.classList.remove("shadow");
   menuDitem5.classList.remove("shadow");
   menuDitem6.classList.remove("shadow");
-}) ;
+});
+menuDitem1.addEventListener("click", () => {
+  console.log("menukort 1");
+  menukort1.classList.remove("hide");
+  menukort2.classList.add("hide");
+  menukort3.classList.add("hide");
+  menukort4.classList.add("hide");
+  menukort5.classList.add("hide");
+  menukort6.classList.add("hide");
+  menuDitem1.classList.add("shadow");
+  menuDitem2.classList.remove("shadow");
+  menuDitem3.classList.remove("shadow");
+  menuDitem4.classList.remove("shadow");
+  menuDitem5.classList.remove("shadow");
+  menuDitem6.classList.remove("shadow");
+});
 menuDitem2.addEventListener("mouseenter", () => {
-  console.log("menukort 2")
-  menukort1.classList.add("hide")
+  console.log("menukort 2");
+  menukort1.classList.add("hide");
   menukort2.classList.remove("hide");
   menukort3.classList.add("hide");
   menukort4.classList.add("hide");
@@ -296,10 +301,9 @@ menuDitem2.addEventListener("mouseenter", () => {
   menuDitem4.classList.remove("shadow");
   menuDitem5.classList.remove("shadow");
   menuDitem6.classList.remove("shadow");
-  
-}) ;
+});
 menuDitem2.addEventListener("click", () => {
-  console.log("menukort 2")
+  console.log("menukort 2");
   menukort1.classList.add("hide");
   menukort2.classList.remove("hide");
   menukort3.classList.add("hide");
@@ -312,10 +316,10 @@ menuDitem2.addEventListener("click", () => {
   menuDitem4.classList.remove("shadow");
   menuDitem5.classList.remove("shadow");
   menuDitem6.classList.remove("shadow");
-}) ;
+});
 menuDitem3.addEventListener("mouseenter", () => {
-  console.log("menukort 3")
-  menukort1.classList.add("hide")
+  console.log("menukort 3");
+  menukort1.classList.add("hide");
   menukort2.classList.add("hide");
   menukort3.classList.remove("hide");
   menukort4.classList.add("hide");
@@ -327,9 +331,9 @@ menuDitem3.addEventListener("mouseenter", () => {
   menuDitem4.classList.remove("shadow");
   menuDitem5.classList.remove("shadow");
   menuDitem6.classList.remove("shadow");
-}) ;
+});
 menuDitem3.addEventListener("click", () => {
-  console.log("menukort 3")
+  console.log("menukort 3");
   menukort1.classList.add("hide");
   menukort2.classList.add("hide");
   menukort3.classList.remove("hide");
@@ -342,10 +346,10 @@ menuDitem3.addEventListener("click", () => {
   menuDitem4.classList.remove("shadow");
   menuDitem5.classList.remove("shadow");
   menuDitem6.classList.remove("shadow");
-}) ;
+});
 menuDitem4.addEventListener("mouseenter", () => {
-  console.log("menukort 4")
-  menukort1.classList.add("hide")
+  console.log("menukort 4");
+  menukort1.classList.add("hide");
   menukort2.classList.add("hide");
   menukort3.classList.add("hide");
   menukort4.classList.remove("hide");
@@ -357,9 +361,9 @@ menuDitem4.addEventListener("mouseenter", () => {
   menuDitem4.classList.add("shadow");
   menuDitem5.classList.remove("shadow");
   menuDitem6.classList.remove("shadow");
-}) ;
+});
 menuDitem4.addEventListener("click", () => {
-  console.log("menukort 4")
+  console.log("menukort 4");
   menukort1.classList.add("hide");
   menukort2.classList.add("hide");
   menukort3.classList.add("hide");
@@ -372,10 +376,10 @@ menuDitem4.addEventListener("click", () => {
   menuDitem4.classList.add("shadow");
   menuDitem5.classList.remove("shadow");
   menuDitem6.classList.remove("shadow");
-}) ;
+});
 menuDitem5.addEventListener("mouseenter", () => {
-  console.log("menukort 5")
-  menukort1.classList.add("hide")
+  console.log("menukort 5");
+  menukort1.classList.add("hide");
   menukort2.classList.add("hide");
   menukort3.classList.add("hide");
   menukort4.classList.add("hide");
@@ -387,9 +391,9 @@ menuDitem5.addEventListener("mouseenter", () => {
   menuDitem4.classList.remove("shadow");
   menuDitem5.classList.add("shadow");
   menuDitem6.classList.remove("shadow");
-}) ;
+});
 menuDitem5.addEventListener("click", () => {
-  console.log("menukort 5")
+  console.log("menukort 5");
   menukort1.classList.add("hide");
   menukort2.classList.add("hide");
   menukort3.classList.add("hide");
@@ -402,24 +406,9 @@ menuDitem5.addEventListener("click", () => {
   menuDitem4.classList.remove("shadow");
   menuDitem5.classList.add("shadow");
   menuDitem6.classList.remove("shadow");
-}) ;
+});
 menuDitem6.addEventListener("mouseenter", () => {
-  console.log("menukort 6")
-  menukort1.classList.add("hide")
-  menukort2.classList.add("hide");
-  menukort3.classList.add("hide");
-  menukort4.classList.add("hide");
-  menukort5.classList.add("hide");
-  menukort6.classList.remove("hide");
-  menuDitem1.classList.remove("shadow");
-  menuDitem2.classList.remove("shadow");
-  menuDitem3.classList.remove("shadow");
-  menuDitem4.classList.remove("shadow");
-  menuDitem5.classList.remove("shadow");
-  menuDitem6.classList.add("shadow");
-}) ;
-menuDitem6.addEventListener("click", () => {
-  console.log("menukort 6")
+  console.log("menukort 6");
   menukort1.classList.add("hide");
   menukort2.classList.add("hide");
   menukort3.classList.add("hide");
@@ -432,5 +421,19 @@ menuDitem6.addEventListener("click", () => {
   menuDitem4.classList.remove("shadow");
   menuDitem5.classList.remove("shadow");
   menuDitem6.classList.add("shadow");
-}) ;
-
+});
+menuDitem6.addEventListener("click", () => {
+  console.log("menukort 6");
+  menukort1.classList.add("hide");
+  menukort2.classList.add("hide");
+  menukort3.classList.add("hide");
+  menukort4.classList.add("hide");
+  menukort5.classList.add("hide");
+  menukort6.classList.remove("hide");
+  menuDitem1.classList.remove("shadow");
+  menuDitem2.classList.remove("shadow");
+  menuDitem3.classList.remove("shadow");
+  menuDitem4.classList.remove("shadow");
+  menuDitem5.classList.remove("shadow");
+  menuDitem6.classList.add("shadow");
+});

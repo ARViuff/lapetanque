@@ -20,10 +20,6 @@ figure{
   display: none;
 }
 
-header{
-    height: 100px;
-    background-color: lightblue;
-}
 
 /* Section Set-up */
 
@@ -41,6 +37,7 @@ header{
   color: white;
   border-radius: 10px 10px 10px 10px;
   height: -moz-fit-content;
+  height: fit-content;
   padding: 2%;
 }
 
@@ -62,6 +59,7 @@ header{
 }
 
 
+
 /* Menukort Set-up */
 
 .menucontainer{
@@ -79,6 +77,7 @@ header{
         grid-template-columns: 0.1fr 1fr 0.2fr;
     /*     background-color: rgb(252, 243, 232); */
         height: fit-content;
+        height: -moz-fit-content;
     }
 
     .menucontainer h1, h3{
@@ -108,7 +107,6 @@ header{
 
 #madfotos{
   order: 3;
-  display: grid;
   align-items: center;
   justify-items: center;
   height: 75vh;
@@ -144,11 +142,6 @@ header{
   display: none;
 }
 
-header{
-    height: 100px;
-    background-color: lightskyblue;
-}
-
 section{
     display: grid;
 }
@@ -178,8 +171,9 @@ hr{
         grid-template-columns: 0.1fr 1fr 0.2fr;
         background-color: rgb(252, 243, 232);
         height: -moz-fit-content;
+        height: fit-content;
         padding: 0% 10%;
-        overflow:scroll;
+        /* overflow:scroll; */
         gap: 15px;
     }
 
@@ -293,23 +287,8 @@ body {
 
 /** ---------- KEYFRAMES START ---------- */
 
-@-webkit-keyframes shadow-drop-tb {
-  0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
-            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
-  }
-  100% {
-    -webkit-box-shadow: 0 -12px 20px -12px rgba(0, 0, 0, 0.35), 0 12px 20px -12px rgba(0, 0, 0, 0.35);
-            box-shadow: 0 -12px 20px -12px rgba(0, 0, 0, 0.35), 0 12px 20px -12px rgba(0, 0, 0, 0.35);
-  }
-}
-@keyframes shadow-drop-tb {
-  0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
-            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
-  }
-  100% {
-    -webkit-box-shadow: 0 -12px 20px -12px rgba(0, 0, 0, 0.35), 0 12px 20px -12px rgba(0, 0, 0, 0.35);
-            box-shadow: 0 -12px 20px -12px rgba(0, 0, 0, 0.35), 0 12px 20px -12px rgba(0, 0, 0, 0.35);
-  }
+
+iframe{
+  width: 50vw;
+  height: auto;
 }
