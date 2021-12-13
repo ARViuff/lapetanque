@@ -30,3 +30,23 @@
     padding-left: 30vw;
   }
 }
+@media (min-width: 601px) and (max-width: 1000px) {
+  .pagetext {
+    max-width: 25rem;
+    max-height: 10rem;
+    margin-top: 30rem;
+    border-style: dotted;
+    border-color: black;
+
+    margin-bottom: 20vw;
+    margin-left: 12vw;
+  }
+  h2 {
+    gap: 2px;
+    padding-bottom: 2px;
+  }
+  h1 {
+    padding-top: 1px;
+    padding-left: 30vw;
+  }
+}
