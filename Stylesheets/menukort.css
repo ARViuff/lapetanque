@@ -1,13 +1,24 @@
-@media (min-width: 600px){
+img{
+  width: 100%;
+}
+figure{
+  padding: 0%;
+  margin: 0%;
+}
+
+/** ---------- Desktop View START ---------- */
+
+
+@media (min-width: 801px){
 
 .shadow{
-	box-shadow: rgb(219, 223, 228) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  background-color: brown;
+  border-radius: 15px;
 }
 
 .slider-container{
   display: none;
 }
-/** ---------- Desktop View START ---------- */
 
 header{
     height: 100px;
@@ -29,6 +40,8 @@ header{
   background-color: darkseagreen;
   color: white;
   border-radius: 10px 10px 10px 10px;
+  height: -moz-fit-content;
+  padding: 2%;
 }
 
 #menu-menudesktop div, hr{
@@ -37,11 +50,12 @@ header{
   
 }
 
-h2{
+#menu-menudesktop h1{
     padding: 10px 5px;
     margin: 0%;
     box-shadow: 0;
-    transition: 0.5s;
+    transition: 0.3s;
+    cursor: pointer;
 }
 #menu-menudesktop hr{
   color: white;
@@ -52,6 +66,7 @@ h2{
 
 .menucontainer{
         display: grid;
+        height: 75vh;
         grid-template-columns: 1fr;
         place-content: start center;
         gap: 20px;
@@ -89,15 +104,41 @@ h2{
   text-align: center;
 }
 
+/* Mad Fotos */
+
+#madfotos{
+  order: 3;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: 75vh;
+}
+
+#madfotos img{
+  border-radius: 40px 40px 40px 40px;
+  min-width: 25vh;
+  max-width: 25vh;
 
 }
-/** ---------- Desktop View START ---------- */
+
+#madfotos figure{
+  display: flex;
+  place-content: center;
+  padding-bottom: 5%;
+}
+
+}
+/** ---------- Desktop View SLUT ---------- */
 
 
 
 
 /** ---------- Mobile View START ---------- */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+
+#madfotos{
+  display: none;
+}
 
 #menu-menudesktop{
   display: none;
@@ -110,7 +151,11 @@ header{
 
 section{
     display: grid;
-    height: 100vh;
+}
+
+section h1{
+  text-align: center;
+  height: 50px;
 }
 
 hr{
@@ -123,14 +168,16 @@ hr{
         place-content: start center;
         gap: 20px;*/
         overflow: scroll; 
-        margin-bottom: 200px;
+        height: 100vh;
+        padding-bottom: 275px;
+        
     }
 
 .menucontent1, .menucontent2, .menucontent3, .menucontent4, .menucontent5, .menucontent6{
         display: grid;
         grid-template-columns: 0.1fr 1fr 0.2fr;
         background-color: rgb(252, 243, 232);
-        height: fit-content;
+        height: -moz-fit-content;
         padding: 0% 10%;
         overflow:scroll;
         gap: 15px;
@@ -204,7 +251,7 @@ body {
   background-color: rgb(207, 207, 207);
   border-radius: 10px 10px 10px 10px;
   text-align: center;
-  padding: 0% 5% 15% 5%;
+
 }
 
 .slide h2 {
@@ -227,10 +274,9 @@ body {
   /* cursor: grabbing; */
 }
 
-.grabbing .slide img {
+.grabbing .slide h1 {
   transform: scale(0.9);
 }
-
 
 
 
