@@ -22,8 +22,24 @@ article {
 }
 
 iframe {
-  width: auto;
-  height: 30vw;
+  width: 100%;
+  height: auto;
+}
+
+
+ .button {
+    border-radius: 2px;
+}
+
+.button a {
+    padding: 8px 12px;
+    border-radius: 2px;    
+    font-size: 14px;
+    color: #ffffff; 
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+
 }
 
  /* det stod i kortet
