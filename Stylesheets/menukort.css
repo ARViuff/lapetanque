@@ -91,25 +91,34 @@ figure{
         height: fit-content;
         height: -moz-fit-content;
         gap: 20px;
-    }
 
-    .menucontainer h1, h3{
-        grid-column: 1/4;
     }
- .menucontainer .nr{
-        grid-column: 1/2;
-        text-align: center;
-        padding-right: 10px;
-    }
+.menucontent1{
+  background-image: url(../Gallery/illu1.png);
+  background-color: rgba(255, 255, 255, 0.863);
+  background-size: cover;
+  background-position: 50% 75%;
+  background-blend-mode: overlay;
+}
 
- .menucontainer .indhold{
-        grid-column: 2/3;
-    }
+.menucontainer h1, h3{
+  grid-column: 1/4;
+  text-align: center;
+}
+.menucontainer .nr{
+  grid-column: 1/2;
+  text-align: center;
+  padding-right: 10px;
+}
 
- .menucontainer .pris{
-    grid-column: 3/4;
-    text-align: end;
-    } 
+.menucontainer .indhold{
+  grid-column: 2/3;
+}
+
+.menucontainer .pris{
+grid-column: 3/4;
+text-align: end;
+} 
   
 #title{
   padding: 2%;
@@ -251,9 +260,9 @@ hr{
         gap: 15px;
     }
 
-
    .menucontainer h1, h3{
         grid-column: 1/4;
+        padding-top: 2%;
     }
 
     .menucontainer .nr{
@@ -275,7 +284,7 @@ hr{
 #backgroundsilder{
   position: fixed;
   width: 100vw;
-  height: 100px;
+  height: 70px;
   background-color: rgb(255, 255, 255);
   bottom: 0%;
   /* box-shadow: rgb(33 35 38 / 10%) 0px -12px 10px -10px; */
@@ -302,7 +311,7 @@ body {
 
 .slider-container {
   position: fixed;
-  height: 100px;
+  height: 70px;
   display: inline-flex;
   overflow: hidden;
   transform: translateX(0);
@@ -319,7 +328,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+ /*  padding: 1rem; */
   user-select: none;
 }
 
@@ -392,6 +401,20 @@ body {
     .hide{
     display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
