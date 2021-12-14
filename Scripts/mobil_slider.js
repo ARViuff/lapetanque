@@ -7,8 +7,11 @@ const menuDitem4 = document.querySelector(".menuDitem4");
 const menuDitem5 = document.querySelector(".menuDitem5");
 const menuDitem6 = document.querySelector(".menuDitem6");
 
-//Shadow
+//Animation 
 const shadow = document.querySelector(".shadow");
+const menudesktop = document.querySelector("#menu-menudesktop");
+const menucontainer = document.querySelector(".menucontainer");
+const madfotos = document.querySelector("#madfotos");
 
 //Menukort
 const menukort1 = document.querySelector(".menucontent1");
@@ -233,13 +236,30 @@ let observer6 = new IntersectionObserver(
 );
 observer6.observe(menu6);
 
+//* Observer 7 ///
+
+let observer7 = new IntersectionObserver(
+  (entries) => {
+    if (entries[0].isIntersecting === true) {
+      console.log("Les Crêpes", this);
+      menudesktop.classList.add("scale-in-ver-top")
+      menucontainer.classList.add("text-focus-in");
+      madfotos.classList.add("text-focus-in");
+    }
+  },
+  { threshold: [1] }
+);
+observer7.observe(menudesktop);
+
+
+
+
+
 //* ---------- Desktop Menu ---------- //
 
 // Hej Det overstående høre til en slider til mobil siden. vi arbejder ligenu på en statemachine til den.//
 
-
-
-/* menuDitem2.addEventListener("click", menuFunktion(2));
+/* menuDitem2.addEventListener("click", active)
 
 
 function menuFunktion(nummer) {
@@ -249,8 +269,22 @@ function menuFunktion(nummer) {
     let menukortVar = "menukort" + i;
     let menuDVar = "menuDitem" + i;
     menukortVar.classList.remove("hide");
-    menuDVar.classList.remove("shadow");
-    
+    menuDVar.classList.remove("shadow"); 
+    console.log("ksdn", this);
+  }
+  menukort.classList.add("hide");
+  menuItem.classList.add("shadow");
+} */
+
+
+/* function menuFunktion(nummer) {
+  let menukort = "menukort" + nummer;
+  let menuItem = "menuDitem" + nummer;
+  for (let i = 1; i <= 6; i++) {
+    let menukortVar = "menukort" + i;
+    let menuDVar = "menuDitem" + i;
+    menukortVar.classList.remove("hide");
+    menuDVar.classList.remove("shadow"); 
     console.log("ksdn", this);
   }
   menukort.classList.add("hide");
@@ -287,6 +321,7 @@ menuDitem1.addEventListener("click", () => {
   menuDitem5.classList.remove("shadow");
   menuDitem6.classList.remove("shadow");
 });
+
 menuDitem2.addEventListener("mouseenter", () => {
   console.log("menukort 2");
   menukort1.classList.add("hide");
