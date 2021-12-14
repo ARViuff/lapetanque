@@ -34,8 +34,7 @@ main h1 {
 button {
   background-color: black;
   border-radius: 20%;
-  width: 15.5vw;
-  height: 10.5vw;
+
   grid-row: 4;
   grid-column: 3/4;
 }
@@ -53,8 +52,8 @@ footer {
   .pagetext {
   }
   button {
-    width: auto;
-    height: auto;
+    width: 20vh;
+    height: 10vh;
   }
 }
 
@@ -62,16 +61,16 @@ footer {
   .pagetext {
   }
   button {
-    width: auto;
-    height: auto;
+    width: 20vh;
+    height: 10vh;
   }
 }
 @media (min-width: 1001px) {
   .pagetext {
   }
   button {
-    width: auto;
-    height: auto;
+    width: 20vh;
+    height: 10vh;
   }
   /*
   h2 {
