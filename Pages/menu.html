@@ -5,18 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Stylesheets/menukort.css">
+    <link rel="stylesheet" href="../Stylesheets/regler_til_site.css">
     <title>Menukort</title>
 </head>
 <body>
-  <!-- HEADER -->
-
-    <!-- MAIN CONTENT -->
+    <header>
+        <nav class="navbar">
+        <a href=""><h1>La Petanque</h1></a>
+        <div class="menuIcon"><img src="../Gallery/menu.svg" alt=""></div>
+        <div class="menuIcon2 gone"><img src="../Gallery/close.svg" alt=""></div>
+        </nav>
+        <ul class="slidermenu hidded hide">
+            <li><a href="">Forside</a></li>
+            <li><a href="">Menu</a></li>
+            <li><a href="">Om os</a></li>
+            <li><a href="">Forside</a></li>
+        </ul>
     </header>
+
     <main>
         <section id="section1">
             <h1 id="title">Menu</h1>
            
             <div class="menucontainer">
+
                 <div class="menucontent1">
                     <h1>Les Spécialites</h1>
                     <p class="nr">1.</p>
@@ -240,6 +252,7 @@
             <p class="pris">63,-</p>
                 </div>
             </div> 
+            <div id="backgroundsilder"></div>
             <div id="menu-menu" class="slider-container">
                 <div class="slide"><h1 class="menuMitem1">Les Spécialites</h1></div>
                 <div class="slide"><h1 class="menuMitem2">Les Galettes</h1></div>
@@ -270,6 +283,7 @@
         </section>
     </main>
     
+    <script src="../Scripts/header.js"></script>
     <script src="../Scripts/mobil_slider.js"></script>
    <!--  <script src="../Scripts/login.js"></script> -->
 </body>
