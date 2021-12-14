@@ -13,6 +13,7 @@ article {
   gap: 10px;
   padding: 40px;
   text-align: center;
+  line-height: 1.6rem;
 }
 
 .kortet {
@@ -27,8 +28,10 @@ iframe {
 }
 
 
- .button {
+.button {
     border-radius: 2px;
+      display: flex;
+  justify-content: center;
 }
 
 .button a {
@@ -39,8 +42,8 @@ iframe {
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
-
 }
+
 
  /* det stod i kortet
   width: 80%;
