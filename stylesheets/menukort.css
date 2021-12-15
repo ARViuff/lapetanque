@@ -112,23 +112,27 @@ figure{
   grid-column: 1/4;
   text-align: center;
   color: var(--secondary);
+  font-family: var(--title);
 }
 .menu-container .nr{
   grid-column: 1/2;
   text-align: center;
   padding-right: 10px;
   color: var(--secondary);
+  font-family: var(--tekst);
 }
 
 .menu-container .indhold{
   grid-column: 2/3;
   color: var(--secondary);
+  font-family: var(--tekst);
 }
 
 .menu-container .pris{
 grid-column: 3/4;
 text-align: end;
 color: var(--secondary);
+font-family: var(--tekst);
 } 
   
 #title{
@@ -136,7 +140,7 @@ color: var(--secondary);
   grid-column: 1/4;
   grid-row: 1/2;
   text-align: center;
-  
+  font-family: var(--title)
 }
 
 .menu-container article {
@@ -255,6 +259,7 @@ section{
 section h1{
   text-align: center;
   height: 50px;
+  font-family: var(--title);
 }
 
 hr{
@@ -298,6 +303,7 @@ article{
         padding-top: 2%;
         text-align: center;
         color: var(--secondary);
+        font-family: var(--title);
     }
 
     .menu-container .nr{
@@ -305,17 +311,20 @@ article{
         text-align: center;
         padding-right: 10px;
         color: var(--secondary);
+        font-family: var(--tekst);
     }
 
     .menu-container .indhold{
         grid-column: 2/3;
         color: var(--secondary);
+        font-family: var(--tekst);
     }
 
     .menu-container .pris{
         grid-column: 3/4;
         text-align: end;
         color: var(--secondary);
+        font-family: var(--tekst);
     }
 
 
