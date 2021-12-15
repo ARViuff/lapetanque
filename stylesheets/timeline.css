@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+main {
+  max-width: 1200px;
+  margin: auto;
+}
 /* Set a background color */
 body {
   background-color: #474e5d;
