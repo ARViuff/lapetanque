@@ -20,12 +20,22 @@ main {
 }
 main h2 {
   font-size: 50px;
+  /*
+  position: absolute;
+  top: 30%;
+  left: 10%;
+*/
 
   grid-column: 2 / 5;
   grid-row: 2;
 }
 main h1 {
   font-size: 70px;
+  /*
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  */
 
   grid-column: 3 / 6;
   grid-row: 3;
@@ -34,14 +44,20 @@ main h1 {
 button {
   background-color: black;
   border-radius: 20%;
-
+  /*
+  position: absolute;
+  top: 70%;
+  left: 30%;
+*/
+  width: 20vh;
+  height: 10vh;
   grid-row: 4;
   grid-column: 3/4;
 }
 button a {
   text-decoration: none;
   color: white;
-  font-size: 50px;
+  font-size: 3rem;
 }
 footer {
   display: flex;
@@ -50,34 +66,35 @@ footer {
 }
 @media (max-width: 800px) {
   .pagetext {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 0.2fr 1fr 0.2fr;
+  }
+  main h1 {
+    grid-column: 2 / 4;
+    grid-row: 3;
+  }
+  main h2 {
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    font-size: 1.5rem;
   }
   button {
-    width: 20vh;
-    height: 10vh;
+    grid-column: 3;
+    grid-row: 5;
   }
 }
-
+/*
 @media (min-width: 801px) and (max-width: 1000px) {
-  .pagetext {
-  }
   button {
     width: 20vh;
     height: 10vh;
   }
 }
 @media (min-width: 1001px) {
-  .pagetext {
-  }
   button {
     width: 20vh;
     height: 10vh;
   }
-  /*
-  h2 {
-    padding-left: 20vw;
-  }
-  h1 {
-    padding-left: 30vw;
-  }
-  */
 }
+*/
