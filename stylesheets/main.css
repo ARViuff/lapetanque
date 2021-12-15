@@ -6,17 +6,18 @@ img {
   width: 100%;
 }
 
-/** ----------- Farve Variabler ----------- */
+/** ----------- import af fonts ----------- */
+@import url("https://fonts.googleapis.com/css2?family=Dosis&family=Patrick+Hand&display=swap");
+
+/** ----------- Farve & tekst Variabler ----------- */
 
 :root {
   --primary: #152450;
-  --secondary: #F2F0EB;
+  --secondary: #f2f0eb;
   --accent: #731018;
-
+  --title: "Patrick Hand", cursive;
+  --tekst: "Dosis", sans-serif;
 }
-
-
-
 
 /** ----------- Desktop Version ----------- */
 

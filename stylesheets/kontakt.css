@@ -1,6 +1,7 @@
 h1 {
   display: flex;
   justify-content: center;
+  padding: 20px;
 }
 
 article {
@@ -10,10 +11,17 @@ article {
 }
 
 .kontakt_info {
-  gap: 10px;
-  padding: 40px;
+  gap: 5px;
+  padding: px;
   text-align: center;
-  line-height: 1.6rem;
+  line-height: 1.8rem;
+  border-radius: 6px;
+  
+}
+
+.text {
+  padding-top: 15px;
+  color: var(--primary);
 }
 
 .kortet {
@@ -29,11 +37,13 @@ iframe {
 
 
 .button {
-    border-radius: 2px;
-      display: flex;
-  justify-content: center;
+  border-radius: 2px;
+  display: flex;
+  place-content: center;
+  font-size: 40px;
 }
 
+/*
 .button a {
     padding: 8px 12px;
     border-radius: 2px;    
@@ -42,8 +52,19 @@ iframe {
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
+} 
+*/
+
+.reserver_mail {
+  padding: 40px;
+  color: var(--secondary);
+  border-radius: 2px;    
+  font-size: 20px;
 }
 
+body {
+  background-color: var(--secondary);
+}
 
  /* det stod i kortet
   width: 80%;
