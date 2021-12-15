@@ -52,7 +52,6 @@ figure{
 .menu-nav ul {
   padding: 2rem;
   list-style-type: none;
-  background: var(--primary);
   display: grid;
   gap: 1rem;
   border-radius: 10px;
