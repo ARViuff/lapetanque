@@ -30,13 +30,13 @@ figure{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     gap: 20px;
-    height: 500px;
+    height: auto;
     padding-inline: 5%;
 }
 
 /* Menu Options */
 .menu-nav{
-  background-color: darkseagreen;
+  background-color: var(--primary);
   color: white;
   border-radius: 20px;
   height: -moz-fit-content;
@@ -51,7 +51,7 @@ figure{
 .menu-nav ul {
   padding: 2rem;
   list-style-type: none;
-  background: #8fbc8f;
+  background: var(--primary);
   display: grid;
   gap: 1rem;
 }
