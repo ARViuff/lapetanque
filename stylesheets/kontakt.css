@@ -13,7 +13,7 @@ article {
   gap: 10px;
   padding: 40px;
   text-align: center;
-  line-height: 1.6rem;
+  line-height: 1.8rem;
 }
 
 .kortet {
@@ -29,9 +29,9 @@ iframe {
 
 
 .button {
-    border-radius: 2px;
-      display: flex;
-  justify-content: center;
+  border-radius: 2px;
+  display: flex;
+  place-content: center;
 }
 
 .button a {
@@ -44,6 +44,13 @@ iframe {
     display: inline-block;
 }
 
+.reserver_mail {
+  padding: 40px;
+}
+
+body {
+  background-color: var(--secondary);
+}
 
  /* det stod i kortet
   width: 80%;
