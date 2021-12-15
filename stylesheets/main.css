@@ -6,6 +6,18 @@ img {
   width: 100%;
 }
 
+/** ----------- Farve Variabler ----------- */
+
+:root {
+  --primary: #152450;
+  --secondary: #F2F0EB;
+  --accent: #731018;
+
+}
+
+
+
+
 /** ----------- Desktop Version ----------- */
 
 @media (min-width: 801px) {
