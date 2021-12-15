@@ -16,10 +16,16 @@ main {
 .indholdstekst {
   padding: 50px;
 }
+
+h1,
+h2 {
+  font-family: var(--title);
+}
+
 /* Set a background color */
 body {
   background-color: var(--secondary);
-  font-family: Helvetica, sans-serif;
+  font-family: var(--tekst);
 }
 
 /* The actual timeline (the vertical ruler) */
