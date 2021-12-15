@@ -30,7 +30,7 @@ figure{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     gap: 20px;
-    height: 500px;
+    height: auto;
     padding-inline: 5%;
 }
 
