@@ -118,6 +118,7 @@ figure{
   grid-column: 1/2;
   text-align: center;
   padding-right: 10px;
+  color: var(--secondary);
 }
 
 .menu-container .indhold{
