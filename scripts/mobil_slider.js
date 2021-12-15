@@ -3,7 +3,7 @@
 //Animation 
 const shadow = document.querySelector(".shadow");
 const menudesktop = document.querySelector(".menu-nav");
-const menucontainer = document.querySelector(".menucontainer");
+const menucontainer = document.querySelector(".menu-container");
 const madfotos = document.querySelector("#madfotos");
 
 //Menukort
