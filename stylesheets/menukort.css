@@ -184,6 +184,11 @@ article.show {
   display: flex;
   place-content: center;
   padding-bottom: 5%;
+  transition: 0.5s;
+}
+
+.img1:hover, .img2:hover, .img3:hover{
+  transform: scale(1.2);
 }
 
 
@@ -536,5 +541,3 @@ iframe{
     opacity: 1;
   }
 }
-
-
