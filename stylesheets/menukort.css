@@ -52,7 +52,6 @@ figure{
 .menu-nav ul {
   padding: 2rem;
   list-style-type: none;
-  background: var(--primary);
   display: grid;
   gap: 1rem;
   border-radius: 10px;
@@ -113,23 +112,27 @@ figure{
   grid-column: 1/4;
   text-align: center;
   color: var(--secondary);
+
 }
 .menu-container .nr{
   grid-column: 1/2;
   text-align: center;
   padding-right: 10px;
   color: var(--secondary);
+
 }
 
 .menu-container .indhold{
   grid-column: 2/3;
   color: var(--secondary);
+
 }
 
 .menu-container .pris{
 grid-column: 3/4;
 text-align: end;
 color: var(--secondary);
+
 } 
   
 #title{
@@ -137,7 +140,7 @@ color: var(--secondary);
   grid-column: 1/4;
   grid-row: 1/2;
   text-align: center;
-  
+
 }
 
 .menu-container article {
@@ -256,6 +259,7 @@ section{
 section h1{
   text-align: center;
   height: 50px;
+ 
 }
 
 hr{
@@ -299,6 +303,7 @@ article{
         padding-top: 2%;
         text-align: center;
         color: var(--secondary);
+      
     }
 
     .menu-container .nr{
@@ -306,17 +311,20 @@ article{
         text-align: center;
         padding-right: 10px;
         color: var(--secondary);
+        
     }
 
     .menu-container .indhold{
         grid-column: 2/3;
         color: var(--secondary);
+        
     }
 
     .menu-container .pris{
         grid-column: 3/4;
         text-align: end;
         color: var(--secondary);
+        
     }
 
 
