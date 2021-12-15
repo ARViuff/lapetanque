@@ -2,9 +2,19 @@
   box-sizing: border-box;
 }
 
+video {
+  width: 100%;
+}
+
 main {
   max-width: 1200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   margin: auto;
+}
+
+.indholdstekst {
+  padding: 50px;
 }
 /* Set a background color */
 body {
