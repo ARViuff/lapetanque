@@ -2,6 +2,9 @@
   margin: 0%;
   padding: 0%;
 }
+header {
+  position: fixed;
+}
 main {
   background-image: url(../gallery/splashimage.webp);
   background-size: cover;
@@ -49,7 +52,12 @@ button a {
 footer {
   display: flex;
   justify-content: space-evenly;
+  width: 100%;
   gap: 10px;
+  position: fixed;
+  z-index: 1;
+  bottom: 0%;
+  color: var(--secondary);
 }
 @media (max-width: 800px) {
   .pagetext {
