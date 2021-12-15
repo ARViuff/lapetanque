@@ -144,7 +144,8 @@ color: var(--secondary);
   grid-column: 1/4;
   grid-row: 1/2;
   text-align: center;
-
+  color: var(--primary);
+  font-size: 2em;
 }
 
 .menu-container article {
@@ -195,7 +196,7 @@ article.show {
 /* scrollbar */
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
 }
 
 /* Track */
