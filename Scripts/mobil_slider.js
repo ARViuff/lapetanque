@@ -1,25 +1,18 @@
 /* Varibles */
-//Menuitem
-const menuDitem1 = document.querySelector(".menuDitem1");
-const menuDitem2 = document.querySelector(".menuDitem2");
-const menuDitem3 = document.querySelector(".menuDitem3");
-const menuDitem4 = document.querySelector(".menuDitem4");
-const menuDitem5 = document.querySelector(".menuDitem5");
-const menuDitem6 = document.querySelector(".menuDitem6");
 
 //Animation 
 const shadow = document.querySelector(".shadow");
-const menudesktop = document.querySelector("#menu-menudesktop");
+const menudesktop = document.querySelector(".menu-nav");
 const menucontainer = document.querySelector(".menucontainer");
 const madfotos = document.querySelector("#madfotos");
 
 //Menukort
-const menukort1 = document.querySelector(".menucontent1");
-const menukort2 = document.querySelector(".menucontent2");
-const menukort3 = document.querySelector(".menucontent3");
-const menukort4 = document.querySelector(".menucontent4");
-const menukort5 = document.querySelector(".menucontent5");
-const menukort6 = document.querySelector(".menucontent6");
+const menukort1 = document.querySelector("#menu-1");
+const menukort2 = document.querySelector("#menu-2");
+const menukort3 = document.querySelector("#menu-3");
+const menukort4 = document.querySelector("#menu-4");
+const menukort5 = document.querySelector("#menu-5");
+const menukort6 = document.querySelector("#menu-6");
 
 //* ---------- Mobil slider ---------- //
 /*Link Til Youtube Tutorial: https://youtu.be/5bxFSOA5JYo */
@@ -257,218 +250,26 @@ observer7.observe(menudesktop);
 
 //* ---------- Desktop Menu ---------- //
 
-// Hej Det overstående høre til en slider til mobil siden. vi arbejder ligenu på en statemachine til den.//
 
-/* menuDitem2.addEventListener("click", active)
+const navList = document.querySelector(".menu-nav ul");
+const menuList = document.querySelector(".menu-container");
 
+navList.addEventListener("click", (e) => {
+  const btnTarget = e.target;
 
-function menuFunktion(nummer) {
-  let menukort = "menukort" + nummer;
-  let menuItem = "menuDitem" + nummer;
-  for (let i = 1; i <= 6; i++) {
-    let menukortVar = "menukort" + i;
-    let menuDVar = "menuDitem" + i;
-    menukortVar.classList.remove("hide");
-    menuDVar.classList.remove("shadow"); 
-    console.log("ksdn", this);
+  if (btnTarget.tagName === "BUTTON") {
+    menuList.querySelectorAll("article").forEach((li) => {
+      li.classList = "";
+    });
+
+    navList.querySelectorAll("button").forEach((btn) => {
+      btn.classList = "";
+    });
+
+    btnTarget.classList.add("active");
+
+    menuList.querySelector(`#${btnTarget.dataset.btn}`).classList.add("show");
   }
-  menukort.classList.add("hide");
-  menuItem.classList.add("shadow");
-} */
-
-
-/* function menuFunktion(nummer) {
-  let menukort = "menukort" + nummer;
-  let menuItem = "menuDitem" + nummer;
-  for (let i = 1; i <= 6; i++) {
-    let menukortVar = "menukort" + i;
-    let menuDVar = "menuDitem" + i;
-    menukortVar.classList.remove("hide");
-    menuDVar.classList.remove("shadow"); 
-    console.log("ksdn", this);
-  }
-  menukort.classList.add("hide");
-  menuItem.classList.add("shadow");
-} */
-
-menuDitem1.addEventListener("mouseenter", () => {
-  console.log("menukort 1");
-  menukort1.classList.remove("hide");
-  menukort2.classList.add("hide");
-  menukort3.classList.add("hide");
-  menukort4.classList.add("hide");
-  menukort5.classList.add("hide");
-  menukort6.classList.add("hide");
-  menuDitem1.classList.add("shadow");
-  menuDitem2.classList.remove("shadow");
-  menuDitem3.classList.remove("shadow");
-  menuDitem4.classList.remove("shadow");
-  menuDitem5.classList.remove("shadow");
-  menuDitem6.classList.remove("shadow");
-});
-menuDitem1.addEventListener("click", () => {
-  console.log("menukort 1");
-  menukort1.classList.remove("hide");
-  menukort2.classList.add("hide");
-  menukort3.classList.add("hide");
-  menukort4.classList.add("hide");
-  menukort5.classList.add("hide");
-  menukort6.classList.add("hide");
-  menuDitem1.classList.add("shadow");
-  menuDitem2.classList.remove("shadow");
-  menuDitem3.classList.remove("shadow");
-  menuDitem4.classList.remove("shadow");
-  menuDitem5.classList.remove("shadow");
-  menuDitem6.classList.remove("shadow");
 });
 
-menuDitem2.addEventListener("mouseenter", () => {
-  console.log("menukort 2");
-  menukort1.classList.add("hide");
-  menukort2.classList.remove("hide");
-  menukort3.classList.add("hide");
-  menukort4.classList.add("hide");
-  menukort5.classList.add("hide");
-  menukort6.classList.add("hide");
-  menuDitem1.classList.remove("shadow");
-  menuDitem2.classList.add("shadow");
-  menuDitem3.classList.remove("shadow");
-  menuDitem4.classList.remove("shadow");
-  menuDitem5.classList.remove("shadow");
-  menuDitem6.classList.remove("shadow");
-});
-menuDitem2.addEventListener("click", () => {
-  console.log("menukort 2");
-  menukort1.classList.add("hide");
-  menukort2.classList.remove("hide");
-  menukort3.classList.add("hide");
-  menukort4.classList.add("hide");
-  menukort5.classList.add("hide");
-  menukort6.classList.add("hide");
-  menuDitem1.classList.remove("shadow");
-  menuDitem2.classList.add("shadow");
-  menuDitem3.classList.remove("shadow");
-  menuDitem4.classList.remove("shadow");
-  menuDitem5.classList.remove("shadow");
-  menuDitem6.classList.remove("shadow");
-});
-menuDitem3.addEventListener("mouseenter", () => {
-  console.log("menukort 3");
-  menukort1.classList.add("hide");
-  menukort2.classList.add("hide");
-  menukort3.classList.remove("hide");
-  menukort4.classList.add("hide");
-  menukort5.classList.add("hide");
-  menukort6.classList.add("hide");
-  menuDitem1.classList.remove("shadow");
-  menuDitem2.classList.remove("shadow");
-  menuDitem3.classList.add("shadow");
-  menuDitem4.classList.remove("shadow");
-  menuDitem5.classList.remove("shadow");
-  menuDitem6.classList.remove("shadow");
-});
-menuDitem3.addEventListener("click", () => {
-  console.log("menukort 3");
-  menukort1.classList.add("hide");
-  menukort2.classList.add("hide");
-  menukort3.classList.remove("hide");
-  menukort4.classList.add("hide");
-  menukort5.classList.add("hide");
-  menukort6.classList.add("hide");
-  menuDitem1.classList.remove("shadow");
-  menuDitem2.classList.remove("shadow");
-  menuDitem3.classList.add("shadow");
-  menuDitem4.classList.remove("shadow");
-  menuDitem5.classList.remove("shadow");
-  menuDitem6.classList.remove("shadow");
-});
-menuDitem4.addEventListener("mouseenter", () => {
-  console.log("menukort 4");
-  menukort1.classList.add("hide");
-  menukort2.classList.add("hide");
-  menukort3.classList.add("hide");
-  menukort4.classList.remove("hide");
-  menukort5.classList.add("hide");
-  menukort6.classList.add("hide");
-  menuDitem1.classList.remove("shadow");
-  menuDitem2.classList.remove("shadow");
-  menuDitem3.classList.remove("shadow");
-  menuDitem4.classList.add("shadow");
-  menuDitem5.classList.remove("shadow");
-  menuDitem6.classList.remove("shadow");
-});
-menuDitem4.addEventListener("click", () => {
-  console.log("menukort 4");
-  menukort1.classList.add("hide");
-  menukort2.classList.add("hide");
-  menukort3.classList.add("hide");
-  menukort4.classList.remove("hide");
-  menukort5.classList.add("hide");
-  menukort6.classList.add("hide");
-  menuDitem1.classList.remove("shadow");
-  menuDitem2.classList.remove("shadow");
-  menuDitem3.classList.remove("shadow");
-  menuDitem4.classList.add("shadow");
-  menuDitem5.classList.remove("shadow");
-  menuDitem6.classList.remove("shadow");
-});
-menuDitem5.addEventListener("mouseenter", () => {
-  console.log("menukort 5");
-  menukort1.classList.add("hide");
-  menukort2.classList.add("hide");
-  menukort3.classList.add("hide");
-  menukort4.classList.add("hide");
-  menukort5.classList.remove("hide");
-  menukort6.classList.add("hide");
-  menuDitem1.classList.remove("shadow");
-  menuDitem2.classList.remove("shadow");
-  menuDitem3.classList.remove("shadow");
-  menuDitem4.classList.remove("shadow");
-  menuDitem5.classList.add("shadow");
-  menuDitem6.classList.remove("shadow");
-});
-menuDitem5.addEventListener("click", () => {
-  console.log("menukort 5");
-  menukort1.classList.add("hide");
-  menukort2.classList.add("hide");
-  menukort3.classList.add("hide");
-  menukort4.classList.add("hide");
-  menukort5.classList.remove("hide");
-  menukort6.classList.add("hide");
-  menuDitem1.classList.remove("shadow");
-  menuDitem2.classList.remove("shadow");
-  menuDitem3.classList.remove("shadow");
-  menuDitem4.classList.remove("shadow");
-  menuDitem5.classList.add("shadow");
-  menuDitem6.classList.remove("shadow");
-});
-menuDitem6.addEventListener("mouseenter", () => {
-  console.log("menukort 6");
-  menukort1.classList.add("hide");
-  menukort2.classList.add("hide");
-  menukort3.classList.add("hide");
-  menukort4.classList.add("hide");
-  menukort5.classList.add("hide");
-  menukort6.classList.remove("hide");
-  menuDitem1.classList.remove("shadow");
-  menuDitem2.classList.remove("shadow");
-  menuDitem3.classList.remove("shadow");
-  menuDitem4.classList.remove("shadow");
-  menuDitem5.classList.remove("shadow");
-  menuDitem6.classList.add("shadow");
-});
-menuDitem6.addEventListener("click", () => {
-  console.log("menukort 6");
-  menukort1.classList.add("hide");
-  menukort2.classList.add("hide");
-  menukort3.classList.add("hide");
-  menukort4.classList.add("hide");
-  menukort5.classList.add("hide");
-  menukort6.classList.remove("hide");
-  menuDitem1.classList.remove("shadow");
-  menuDitem2.classList.remove("shadow");
-  menuDitem3.classList.remove("shadow");
-  menuDitem4.classList.remove("shadow");
-  menuDitem5.classList.remove("shadow");
-  menuDitem6.classList.add("shadow");
-});
+

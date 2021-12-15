@@ -20,7 +20,7 @@ figure{
   display: none;
 }
 
-.backgroundsilder{
+#backgroundsilder{
   display: none;
 }
 
@@ -35,7 +35,7 @@ figure{
 }
 
 /* Menu Options */
-#menu-menudesktop{
+.menu-nav{
   background-color: darkseagreen;
   color: white;
   border-radius: 20px;
@@ -48,28 +48,41 @@ figure{
   grid-row: 2/3;
 }
 
-#menu-menudesktop div, hr{
-  padding-inline: 3%;
-  width: 85%;
-  
+.menu-nav ul {
+  padding: 2rem;
+  list-style-type: none;
+  background: #8fbc8f;
+  display: grid;
+  gap: 1rem;
 }
 
-#menu-menudesktop h1{
-    padding: 10px 5px;
-    margin: 0%;
-    box-shadow: 0;
-    transition: 0.3s;
-    cursor: pointer;
-}
-#menu-menudesktop hr{
-  color: white;
+.menu-nav li + li {
+  border-top: 1px solid rgb(255, 255, 255);
+  padding-top: 1rem;
 }
 
+.menu-nav button {
+  border: none;
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-align: start;
+  padding: .5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: .25s;
+}
 
+.menu-nav button:hover,
+.menu-nav button.active {
+  background: #a52a2a;
+}
 
 /* Menukort Set-up */
 
-.menucontainer{
+.menu-container{
         display: grid;
         height: 75vh;
         grid-template-columns: 1fr;
@@ -84,7 +97,7 @@ figure{
          -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
-.menucontent1, .menucontent2, .menucontent3, .menucontent4, .menucontent5, .menucontent6{
+    article{
         display: grid;
         grid-template-columns: 0.1fr 1fr 0.2fr;
     /*     background-color: rgb(252, 243, 232); */
@@ -93,29 +106,22 @@ figure{
         gap: 20px;
 
     }
-.menucontent1{
-  background-image: url(../Gallery/illu1.png);
-  background-color: rgba(255, 255, 255, 0.863);
-  background-size: cover;
-  background-position: 50% 75%;
-  background-blend-mode: overlay;
-}
 
-.menucontainer h1, h3{
+.menu-container h1, h3{
   grid-column: 1/4;
   text-align: center;
 }
-.menucontainer .nr{
+.menu-container .nr{
   grid-column: 1/2;
   text-align: center;
   padding-right: 10px;
 }
 
-.menucontainer .indhold{
+.menu-container .indhold{
   grid-column: 2/3;
 }
 
-.menucontainer .pris{
+.menu-container .pris{
 grid-column: 3/4;
 text-align: end;
 } 
@@ -127,6 +133,20 @@ text-align: end;
   text-align: center;
   
 }
+
+.menu-container article {
+  display: none;
+  
+  grid-area: 1 / 1;
+  
+  place-content: center;
+  
+}
+
+article.show {
+  display: grid;
+}
+
 
 /* Mad Fotos */
 
@@ -210,14 +230,10 @@ text-align: end;
 /** ---------- Mobile View START ---------- */
 @media (max-width: 800px) {
 
-#madfotos{
+#madfotos, .menu-nav, #menu-menudesktop{
   display: none;
 }
 
-#menu-menudesktop{
-  display: none;
-  
-}
 
 section{
     display: grid;
@@ -238,7 +254,7 @@ hr{
 }
 
 
-.menucontainer{
+.menu-container{
 /*         display: grid;
         grid-template-columns: 1fr 1fr 1fr ; 
         place-content: start center;
@@ -249,7 +265,7 @@ hr{
         
     }
 
-.menucontent1, .menucontent2, .menucontent3, .menucontent4, .menucontent5, .menucontent6{
+article{
         display: grid;
         grid-template-columns: 0.1fr 1fr 0.2fr;
         background-color: rgb(255, 255, 255);
@@ -260,22 +276,23 @@ hr{
         gap: 15px;
     }
 
-   .menucontainer h1, h3{
+   .menu-container h1, h3{
         grid-column: 1/4;
         padding-top: 2%;
+        text-align: center;
     }
 
-    .menucontainer .nr{
+    .menu-container .nr{
         grid-column: 1/2;
         text-align: center;
         padding-right: 10px;
     }
 
-    .menucontainer .indhold{
+    .menu-container .indhold{
         grid-column: 2/3;
     }
 
-    .menucontainer .pris{
+    .menu-container .pris{
         grid-column: 3/4;
         text-align: end;
     }
