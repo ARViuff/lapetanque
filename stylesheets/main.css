@@ -79,11 +79,12 @@ body {
 
   header a {
     text-decoration: none;
-    color: white;
+    color: var(--secondary);
   }
 
   header h1 {
     padding-left: 5%;
+    color: black;
   }
 
   .menuIcon {
